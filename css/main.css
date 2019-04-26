@@ -1085,7 +1085,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: url("D:/blog1/themes/next/source/images/1.jpg");
+  background: transparent;
 }
 .header-inner {
   position: relative;
@@ -1730,7 +1730,18 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
-  opacity: 1;
+/* start*/
+  border-radius: 60%;
+  transition: 2.5s all;
+}
+.site-author-image {
+  border-radius: 100%;
+}
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   margin: 0;
@@ -1765,7 +1776,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #99fbd0;
+  background: #28fff9;
 }
 .feed-link,
 .chat {
