@@ -1085,7 +1085,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: transparent;
+  background: url("D:/blog1/themes/next/source/images/1.jpg");
 }
 .header-inner {
   position: relative;
@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffdefb;
+  background: #99fbd0;
 }
 .feed-link,
 .chat {
