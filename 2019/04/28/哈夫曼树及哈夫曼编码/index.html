@@ -97,19 +97,17 @@
 
 
 
-  <meta name="description" content="差不多弄博客一个星期了，大致的轮廓终于有点样子了。弄完了看看感觉配置挺简单的，其实真的是挺不容易，各种细节都需要处理一下。剩下的就是专注的写博客了，相比较CSDN感觉这里更加私人化，每天学一些东西，同时有一些生活的感悟都会在这里记录下来，大概以后回首往事会收货很多吧。 （附上一张自己的照片）">
+  <meta name="description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/27/my-first-blog/index.html">
+<meta property="og:title" content="哈夫曼树及哈夫曼编码">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="差不多弄博客一个星期了，大致的轮廓终于有点样子了。弄完了看看感觉配置挺简单的，其实真的是挺不容易，各种细节都需要处理一下。剩下的就是专注的写博客了，相比较CSDN感觉这里更加私人化，每天学一些东西，同时有一些生活的感悟都会在这里记录下来，大概以后回首往事会收货很多吧。 （附上一张自己的照片）">
+<meta property="og:description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://yuntengzhiyu.github.io/2019/04/27/my-first-blog/11.jpg">
-<meta property="og:updated_time" content="2019-04-28T12:30:54.134Z">
+<meta property="og:updated_time" content="2019-04-28T14:11:48.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first blog">
-<meta name="twitter:description" content="差不多弄博客一个星期了，大致的轮廓终于有点样子了。弄完了看看感觉配置挺简单的，其实真的是挺不容易，各种细节都需要处理一下。剩下的就是专注的写博客了，相比较CSDN感觉这里更加私人化，每天学一些东西，同时有一些生活的感悟都会在这里记录下来，大概以后回首往事会收货很多吧。 （附上一张自己的照片）">
-<meta name="twitter:image" content="https://yuntengzhiyu.github.io/2019/04/27/my-first-blog/11.jpg">
+<meta name="twitter:title" content="哈夫曼树及哈夫曼编码">
+<meta name="twitter:description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
 
 
 
@@ -117,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/27/my-first-blog/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/">
 
 
 
@@ -127,7 +125,7 @@
   };
 </script>
 
-  <title>my first blog | 云腾致雨</title>
+  <title>哈夫曼树及哈夫曼编码 | 云腾致雨</title>
   
 
 
@@ -347,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/27/my-first-blog/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -364,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my first blog
+          <h1 class="post-title" itemprop="name headline">哈夫曼树及哈夫曼编码
 
               
             
@@ -390,24 +388,12 @@
                 
               
 
-              <time title="创建时间：2019-04-27 13:12:28" itemprop="dateCreated datePublished" datetime="2019-04-27T13:12:28+08:00">2019-04-27</time>
+              <time title="创建时间：2019-04-28 22:05:00 / 修改时间：22:11:48" itemprop="dateCreated datePublished" datetime="2019-04-28T22:05:00+08:00">2019-04-28</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-28 20:30:54" itemprop="dateModified" datetime="2019-04-28T20:30:54+08:00">2019-04-28</time>
               
             
           </span>
@@ -448,11 +434,8 @@
       
 
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="281" height="86" src="//music.163.com/outchain/player?type=2&id=441532&auto=1&height=66"></iframe>
-
-<p>差不多弄博客一个星期了，大致的轮廓终于有点样子了。弄完了看看感觉配置挺简单的，其实真的是挺不容易，各种细节都需要处理一下。剩下的就是专注的写博客了，相比较CSDN感觉这里更加私人化，每天学一些东西，同时有一些生活的感悟都会在这里记录下来，大概以后回首往事会收货很多吧。</p>
-<p>（附上一张自己的照片）</p>
-<p><img src="11.jpg" alt></p>
+        <p>哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（树的带权路径长度）。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Tnode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> w;</span><br><span class="line">    <span class="keyword">int</span> pos;</span><br><span class="line">    <span class="keyword">int</span> parent,lchild,rchild;</span><br><span class="line">     <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Tnode &amp;a)<span class="keyword">const</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">return</span> a.w &lt; w;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;Tnode,*tree;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">priority_queue&lt;Tnode&gt;P;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">select</span><span class="params">(tree &amp;HT,<span class="keyword">int</span> &amp;s1, <span class="keyword">int</span> &amp;s2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Tnode t = P.top();</span><br><span class="line">    s1 = t.pos;</span><br><span class="line">    P.pop();</span><br><span class="line">    t = P.top();</span><br><span class="line">    s2 = t.pos;</span><br><span class="line">    P.pop();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huffmantree</span><span class="params">(tree &amp;HT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = <span class="number">2</span> * n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> s1,s2;</span><br><span class="line">    HT = <span class="keyword">new</span> Tnode[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m ;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        HT[i].parent = HT[i].lchild = HT[i].rchild = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; HT[i].w;</span><br><span class="line">        HT[i].pos = i;</span><br><span class="line">        P.push(HT[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = n + <span class="number">1</span>; i &lt;= m ;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        select(HT ,s1, s2);</span><br><span class="line">        HT[s1].parent = i;</span><br><span class="line">        HT[s2].parent = i;</span><br><span class="line">        HT[i].lchild = s1;</span><br><span class="line">        HT[i].rchild = s2;</span><br><span class="line">        HT[i].w = HT[s1].w + HT[s2].w;</span><br><span class="line">        HT[i].pos = i ;</span><br><span class="line">        P.push(HT[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huffmancode</span><span class="params">(tree &amp;HT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> index = i;</span><br><span class="line">        <span class="keyword">int</span> p = HT[i].parent;</span><br><span class="line">        <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(HT[p].lchild == index)</span><br><span class="line">                s[i] += <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                s[i] += <span class="string">'1'</span>;</span><br><span class="line">            index = p;</span><br><span class="line">            p = HT[p].parent;</span><br><span class="line">        &#125;</span><br><span class="line">        reverse(s[i].begin(),s[i].end());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    tree HT;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    huffmantree(HT);</span><br><span class="line">    huffmancode(HT);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个字符的权值为："</span> &lt;&lt; HT[i].w &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个字符的哈夫曼编码为:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; s[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -498,15 +481,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/27/my-first-blog/" rel="next" title="my first blog">
+                <i class="fa fa-chevron-left"></i> my first blog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/28/哈夫曼树及哈夫曼编码/" rel="prev" title="哈夫曼树及哈夫曼编码">
-                哈夫曼树及哈夫曼编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -841,7 +824,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/04/27/my-first-blog/'
+    refer: '2019/04/28/哈夫曼树及哈夫曼编码/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
