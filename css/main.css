@@ -1540,7 +1540,7 @@ pre .javascript .function {
 .posts-expand .post-tags a {
   display: inline-block;
   margin-right: 10px;
-  font-size: 50px;
+  font-size: 18px;
 }
 .post-nav {
   display: table;
@@ -1854,7 +1854,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #861be9;
+  background: #2ebeff;
 }
 .feed-link,
 .chat {
