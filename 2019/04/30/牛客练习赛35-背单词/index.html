@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="云腾致雨">
 <meta property="og:description" content="题目链接： 背单词 思路我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-30T11:06:50.158Z">
+<meta property="og:updated_time" content="2019-04-30T11:09:51.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客练习赛35 背单词">
 <meta name="twitter:description" content="题目链接： 背单词 思路我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i">
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-04-30 18:34:16 / 修改时间：19:06:50" itemprop="dateCreated datePublished" datetime="2019-04-30T18:34:16+08:00">2019-04-30</time>
+              <time title="创建时间：2019-04-30 18:34:16 / 修改时间：19:09:51" itemprop="dateCreated datePublished" datetime="2019-04-30T18:34:16+08:00">2019-04-30</time>
             
 
             
@@ -439,8 +439,8 @@
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。</p>
 <p>$dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。</p>
 <p>当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i][1][1]$的状态，之后的话，</p>
-<p>$ dp[i][0][j] = dp[i - 1][0][j - 1] * 5 $</p>
-<p>$ dp[i][1][j] = dp[i - 1][1][j - 1] * 21 $</p>
+<p>$ dp[i][0][j] $ = $dp[i - 1][0][j - 1]$ * 5 </p>
+<p>$ dp[i][1][j] $  = $dp[i - 1][1][j - 1]$ * 21 </p>
 <p>就很好求了。  (记录一下在next主题中调用数学公式：需要在文章开头打开mathjax开关（mathjax: true), 同时注意配置中math中改为true)</p>
 <p>如果求$dp[i][0][1]$的话，说明第i个字符是元音，且第i - 1个字符是辅音，至于前边有多少个辅音，我们就需要通过循环遍历去找了。</p>
 <p>dp的题真的是妙啊，由前边的状态推后边的状态，一层一层的求出来答案。看来以后还要多多训练这方面的题目。</p>
