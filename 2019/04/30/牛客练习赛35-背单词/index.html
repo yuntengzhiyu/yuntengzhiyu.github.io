@@ -97,17 +97,18 @@
 
 
 
-  <meta name="description" content="不畏艰险，乘风破浪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/categories/index.html">
+  <meta name="description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
+<meta name="keywords" content="动态规划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="牛客练习赛35 背单词">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/30/牛客练习赛35-背单词/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="不畏艰险，乘风破浪">
+<meta property="og:description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-26T07:13:42.376Z">
+<meta property="og:updated_time" content="2019-04-30T10:48:40.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="不畏艰险，乘风破浪">
+<meta name="twitter:title" content="牛客练习赛35 背单词">
+<meta name="twitter:description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
 
 
 
@@ -115,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/categories/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/30/牛客练习赛35-背单词/">
 
 
 
@@ -125,7 +126,7 @@
   };
 </script>
 
-  <title>分类 | 云腾致雨</title>
+  <title>牛客练习赛35 背单词 | 云腾致雨</title>
   
 
 
@@ -249,7 +250,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -325,82 +326,197 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/30/牛客练习赛35-背单词/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="云腾致雨">
+      <meta itemprop="description" content="不畏艰险，乘风破浪">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="云腾致雨">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">分类
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
+          <h1 class="post-title" itemprop="name headline">牛客练习赛35 背单词
+
               
-              
-              暂无分类
-            </div>
-            <div class="category-all">
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-30 18:34:16 / 修改时间：18:48:40" itemprop="dateCreated datePublished" datetime="2019-04-30T18:34:16+08:00">2019-04-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>题目链接： <a href="https://ac.nowcoder.com/acm/contest/326/B" target="_blank" rel="noopener">背单词</a></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。</p>
+<p>$dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。</p>
+<p>当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i][1][1]$的状态，之后的话，<br>$$<br>dp[i][0][j] = dp[i - 1][0][j - 1] <em> 5\<br>dp[i][1][j] = dp[i - 1][1][j - 1] </em> 21<br>$$<br>就很好求了。  </p>
+<p>如果求$dp[i][0][1]$的话，说明第i个字符是元音，且第i - 1个字符是辅音，至于前边有多少个辅音，我们就需要通过循环遍历去找了。注意是$<em>$5还是</em>21 ，一定要搞清楚。</p>
+<p>dp的题真的是妙啊，由前边的状态推后边的状态，一层一层的求出来答案。看来以后还要多多训练这方面的题目。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">5001</span>][<span class="number">2</span>][<span class="number">51</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T,N,A,B;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        memset(dp,<span class="number">0</span>,sizeof(dp));</span><br><span class="line">        cin &gt;&gt; N &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>] = <span class="number">5</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] = <span class="number">21</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, B) ; ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][<span class="number">1</span>] = (dp[i][<span class="number">0</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">1</span>][j] * <span class="number">5</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, A); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][<span class="number">1</span>] = (dp[i][<span class="number">1</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">0</span>][j] * <span class="number">21</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i , A); ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][j] = dp[i - <span class="number">1</span>][<span class="number">0</span>][j - <span class="number">1</span>] * <span class="number">5</span> % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i, B); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][j] = dp[i - <span class="number">1</span>][<span class="number">1</span>][j - <span class="number">1</span>] * <span class="number">21</span> % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1</span>; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= <span class="number">50</span>; ++k)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum += dp[i][j][k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; sum % mod &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/29/python知识记录/" rel="next" title="python知识记录">
+                <i class="fa fa-chevron-left"></i> python知识记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -434,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +685,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -745,7 +887,7 @@
   
     <script>
   window.livereOptions = {
-    refer: 'categories/index.html'
+    refer: '2019/04/30/牛客练习赛35-背单词/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
