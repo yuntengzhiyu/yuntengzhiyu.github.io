@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
+  <meta name="description" content="题目链接： 背单词 思路我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i">
 <meta name="keywords" content="动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛客练习赛35 背单词">
 <meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/30/牛客练习赛35-背单词/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
+<meta property="og:description" content="题目链接： 背单词 思路我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-30T10:48:40.987Z">
+<meta property="og:updated_time" content="2019-04-30T10:54:41.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客练习赛35 背单词">
-<meta name="twitter:description" content="题目链接： 背单词 思路我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$">
+<meta name="twitter:description" content="题目链接： 背单词 思路我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。 $dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。 当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i">
 
 
 
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-04-30 18:34:16 / 修改时间：18:48:40" itemprop="dateCreated datePublished" datetime="2019-04-30T18:34:16+08:00">2019-04-30</time>
+              <time title="创建时间：2019-04-30 18:34:16 / 修改时间：18:54:41" itemprop="dateCreated datePublished" datetime="2019-04-30T18:34:16+08:00">2019-04-30</time>
             
 
             
@@ -436,12 +436,12 @@
 
       
         <p>题目链接： <a href="https://ac.nowcoder.com/acm/contest/326/B" target="_blank" rel="noopener">背单词</a></p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我们设置一个三维dp[][][][]数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我们设置一个三维dp数组 ，$dp[i][j][k]$ 代表 第i个字符是j状态（j为0代表是元音，1为辅音）,同时该j状态已经持续了k个字母，这样我们就能唯一确定该字符序列由什么组成了。</p>
 <p>$dp[1][0][1]$ = 5  ,   $dp[1][1][1]$ =  21.  这是初始化。</p>
 <p>当i从2开始遍历的时候，我们先确定一下$dp[i][0][1]$ 以及 $dp[i][1][1]$的状态，之后的话，<br>$$<br>dp[i][0][j] = dp[i - 1][0][j - 1] <em> 5\<br>dp[i][1][j] = dp[i - 1][1][j - 1] </em> 21<br>$$<br>就很好求了。  </p>
 <p>如果求$dp[i][0][1]$的话，说明第i个字符是元音，且第i - 1个字符是辅音，至于前边有多少个辅音，我们就需要通过循环遍历去找了。注意是$<em>$5还是</em>21 ，一定要搞清楚。</p>
 <p>dp的题真的是妙啊，由前边的状态推后边的状态，一层一层的求出来答案。看来以后还要多多训练这方面的题目。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">5001</span>][<span class="number">2</span>][<span class="number">51</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T,N,A,B;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        memset(dp,<span class="number">0</span>,sizeof(dp));</span><br><span class="line">        cin &gt;&gt; N &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>] = <span class="number">5</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] = <span class="number">21</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, B) ; ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][<span class="number">1</span>] = (dp[i][<span class="number">0</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">1</span>][j] * <span class="number">5</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, A); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][<span class="number">1</span>] = (dp[i][<span class="number">1</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">0</span>][j] * <span class="number">21</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i , A); ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][j] = dp[i - <span class="number">1</span>][<span class="number">0</span>][j - <span class="number">1</span>] * <span class="number">5</span> % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i, B); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][j] = dp[i - <span class="number">1</span>][<span class="number">1</span>][j - <span class="number">1</span>] * <span class="number">21</span> % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1</span>; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= <span class="number">50</span>; ++k)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum += dp[i][j][k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; sum % mod &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">5001</span>][<span class="number">2</span>][<span class="number">51</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T,N,A,B;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>] = <span class="number">5</span>;</span><br><span class="line">        dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>] = <span class="number">21</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, B) ; ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][<span class="number">1</span>] = (dp[i][<span class="number">0</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">1</span>][j] * <span class="number">5</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= min(i - <span class="number">1</span>, A); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][<span class="number">1</span>] = (dp[i][<span class="number">1</span>][<span class="number">1</span>] + dp[i - <span class="number">1</span>][<span class="number">0</span>][j] * <span class="number">21</span>) % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i , A); ++j)</span><br><span class="line">            dp[i][<span class="number">0</span>][j] = dp[i - <span class="number">1</span>][<span class="number">0</span>][j - <span class="number">1</span>] * <span class="number">5</span> % mod;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">2</span>; j &lt;= min(i, B); ++j)</span><br><span class="line">            dp[i][<span class="number">1</span>][j] = dp[i - <span class="number">1</span>][<span class="number">1</span>][j - <span class="number">1</span>] * <span class="number">21</span> % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1</span>; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= <span class="number">50</span>; ++k)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum += dp[i][j][k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; sum % mod &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -912,6 +912,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 
