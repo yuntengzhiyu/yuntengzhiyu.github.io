@@ -97,18 +97,20 @@
 
 
 
-  <meta name="description" content="题目链接 题意让你连起来字符串，看看最终的字符串能否是第一个字母为b,最后一个字符是m. 思路先把以b开头的字符串放进队列，然后查看每个字符串的最后一个字母，在遍历一遍字符串看看有没有开头是这个字母的，在放进队列，队列完毕后，就会出来 答案。 123456789101112131415161718192021222324252627282930313233343536373839404142434">
-<meta name="keywords" content="bfs">
+  <meta name="description" content="题目链接：How Many Answers Are Wrong 题意输入i r sum 代表 从第 i 个数 到第 r个数的和为 sum, 问你输入的总数据里有几组是矛盾的。 思路应用带权并查集，记录每个节点到他所在树的根节点的值，代表从这个节点到根节点的这一段区间的和。  当我们输入 L ，R， SUM 时，如果root(L), root(R) 不一致，也就是说我们这个时候是判断不出来的。如果一">
+<meta name="keywords" content="并查集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="变形课">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/29/HDU-变形课/index.html">
+<meta property="og:title" content="HDU- 3038 How Many Answers Are Wrong">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="题目链接 题意让你连起来字符串，看看最终的字符串能否是第一个字母为b,最后一个字符是m. 思路先把以b开头的字符串放进队列，然后查看每个字符串的最后一个字母，在遍历一遍字符串看看有没有开头是这个字母的，在放进队列，队列完毕后，就会出来 答案。 123456789101112131415161718192021222324252627282930313233343536373839404142434">
+<meta property="og:description" content="题目链接：How Many Answers Are Wrong 题意输入i r sum 代表 从第 i 个数 到第 r个数的和为 sum, 问你输入的总数据里有几组是矛盾的。 思路应用带权并查集，记录每个节点到他所在树的根节点的值，代表从这个节点到根节点的这一段区间的和。  当我们输入 L ，R， SUM 时，如果root(L), root(R) 不一致，也就是说我们这个时候是判断不出来的。如果一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-29T13:32:31.294Z">
+<meta property="og:image" content="https://yuntengzhiyu.github.io/2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/11.jpg">
+<meta property="og:updated_time" content="2019-05-01T03:07:47.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="变形课">
-<meta name="twitter:description" content="题目链接 题意让你连起来字符串，看看最终的字符串能否是第一个字母为b,最后一个字符是m. 思路先把以b开头的字符串放进队列，然后查看每个字符串的最后一个字母，在遍历一遍字符串看看有没有开头是这个字母的，在放进队列，队列完毕后，就会出来 答案。 123456789101112131415161718192021222324252627282930313233343536373839404142434">
+<meta name="twitter:title" content="HDU- 3038 How Many Answers Are Wrong">
+<meta name="twitter:description" content="题目链接：How Many Answers Are Wrong 题意输入i r sum 代表 从第 i 个数 到第 r个数的和为 sum, 问你输入的总数据里有几组是矛盾的。 思路应用带权并查集，记录每个节点到他所在树的根节点的值，代表从这个节点到根节点的这一段区间的和。  当我们输入 L ，R， SUM 时，如果root(L), root(R) 不一致，也就是说我们这个时候是判断不出来的。如果一">
+<meta name="twitter:image" content="https://yuntengzhiyu.github.io/2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/11.jpg">
 
 
 
@@ -116,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/29/HDU-变形课/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/">
 
 
 
@@ -126,7 +128,7 @@
   };
 </script>
 
-  <title>变形课 | 云腾致雨</title>
+  <title>HDU- 3038 How Many Answers Are Wrong | 云腾致雨</title>
   
 
 
@@ -346,7 +348,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/29/HDU-变形课/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -363,7 +365,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">变形课
+          <h1 class="post-title" itemprop="name headline">HDU- 3038 How Many Answers Are Wrong
 
               
             
@@ -389,7 +391,7 @@
                 
               
 
-              <time title="创建时间：2019-04-29 21:29:26 / 修改时间：21:32:31" itemprop="dateCreated datePublished" datetime="2019-04-29T21:29:26+08:00">2019-04-29</time>
+              <time title="创建时间：2019-05-01 10:44:26 / 修改时间：11:07:47" itemprop="dateCreated datePublished" datetime="2019-05-01T10:44:26+08:00">2019-05-01</time>
             
 
             
@@ -435,10 +437,17 @@
       
 
       
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1181" target="_blank" rel="noopener">题目链接</a></p>
-<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>让你连起来字符串，看看最终的字符串能否是第一个字母为b,最后一个字符是m.</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>先把以b开头的字符串放进队列，然后查看每个字符串的最后一个字母，在遍历一遍字符串看看有没有开头是这个字母的，在放进队列，队列完毕后，就会出来 答案。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">1001</span>];</span><br><span class="line"><span class="keyword">int</span> tot;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;Q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ;i &lt; tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i][<span class="number">0</span>] == <span class="string">'b'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Q.push(i);</span><br><span class="line">            vis[i] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> A = Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        <span class="keyword">int</span> sz = s[A].size();</span><br><span class="line">        <span class="keyword">char</span> c = s[A][sz - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(c == <span class="string">'m'</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tot; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i][<span class="number">0</span>] == c &amp;&amp; !vis[i])</span><br><span class="line">            &#123;</span><br><span class="line">                vis[i] = <span class="number">1</span>;</span><br><span class="line">                Q.push(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; s[<span class="number">0</span>])&#123;</span><br><span class="line">        tot = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; s[tot])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[tot][<span class="number">0</span>] == <span class="string">'0'</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        tot++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="keyword">int</span> c = bfs();</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="number">1</span>)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"No."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>题目链接：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=3038" target="_blank" rel="noopener">How Many Answers Are Wrong</a></p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>输入i r sum 代表 从第 i 个数 到第 r个数的和为 sum, 问你输入的总数据里有几组是矛盾的。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>应用带权并查集，记录每个节点到他所在树的根节点的值，代表从这个节点到根节点的这一段区间的和。  当我们输入 L ，R， SUM 时，如果root(L), root(R) 不一致，也就是说我们这个时候是判断不出来的。如果一致，那我们就看一下 val[L] - val[R] == SUM ?</p>
+<p>在并查集中，我们在Find函数中加入了 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != f[x])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = f[x];</span><br><span class="line">        f[x] = Find(f[x]);</span><br><span class="line">        val[x] += val[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f[x];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个完成之后，val[x]就等于x这个节点到根节点的权值了。</p>
+<p>这里画一张带权并查集的图 ，有助于理解这句话:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val[fa] = sum + val[b] - val[a];</span><br></pre></td></tr></table></figure>
+<p><img src="11.jpg" alt></p>
+<p>最后是总代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">200005</span>],val[<span class="number">200005</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != f[x])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = f[x];</span><br><span class="line">        f[x] = Find(f[x]);</span><br><span class="line">        val[x] += val[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f[x];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N, M, a, b, ans, sum;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;N,&amp;M) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            f[i] = i;</span><br><span class="line">            val[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= M; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; sum;</span><br><span class="line">            a--;</span><br><span class="line">            <span class="keyword">int</span> fa = Find(a);</span><br><span class="line">            <span class="keyword">int</span> fb = Find(b);</span><br><span class="line">            <span class="keyword">if</span>(fa == fb)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>((val[a] - val[b]) != sum)</span><br><span class="line">                    ans++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                f[fa] = fb;</span><br><span class="line">                val[fa] = sum + val[b] - val[a];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -477,7 +486,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bfs/" rel="tag"># bfs</a>
+            <a href="/tags/并查集/" rel="tag"># 并查集</a>
           
         </div>
       
@@ -490,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/29/A-strange-lift/" rel="next" title="HDU - 1548 A strange lift">
-                <i class="fa fa-chevron-left"></i> HDU - 1548 A strange lift
+              <a href="/2019/05/01/Latex-学习笔记/" rel="next" title="Latex 学习笔记">
+                <i class="fa fa-chevron-left"></i> Latex 学习笔记
               </a>
             
           </div>
@@ -499,10 +508,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/29/python知识记录/" rel="prev" title="python知识记录">
-                python知识记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -900,7 +905,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/04/29/HDU-变形课/'
+    refer: '2019/05/01/HDU-3038-How-Many-Answers-Are-Wrong/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
