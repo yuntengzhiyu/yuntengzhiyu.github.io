@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="题目链接 题意每层电梯有一个数字num，在第i层楼梯中你按了上，那么你就会到达i + num 层或者是 i - num 层，当然这个层数 &amp;gt;= 1 &amp;amp;&amp;amp; &amp;lt;= n, 现在问你要从A层到达B层，最少需要按多少次按钮。 思路基础BFS，每层楼梯有两个相应的状态，然后不断搜索就行了。 1234567891011121314151617181920212223242526272">
-<meta name="keywords" content="bfs">
+  <meta name="description" content="本身邻接矩阵就是一个简单的二维数组，但是考虑到顶点的下标标号可能不是从1开始到的N结束的。所以用如下算法。当然你也可以离散化一下坐标再普通存图 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;bits/stdc++.h&amp;gt;using">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU - 1548 A strange lift">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/29/A-strange-lift/index.html">
+<meta property="og:title" content="数据结构之邻接矩阵存图">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/06/数据结构之邻接矩阵存图/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="题目链接 题意每层电梯有一个数字num，在第i层楼梯中你按了上，那么你就会到达i + num 层或者是 i - num 层，当然这个层数 &amp;gt;= 1 &amp;amp;&amp;amp; &amp;lt;= n, 现在问你要从A层到达B层，最少需要按多少次按钮。 思路基础BFS，每层楼梯有两个相应的状态，然后不断搜索就行了。 1234567891011121314151617181920212223242526272">
+<meta property="og:description" content="本身邻接矩阵就是一个简单的二维数组，但是考虑到顶点的下标标号可能不是从1开始到的N结束的。所以用如下算法。当然你也可以离散化一下坐标再普通存图 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;bits/stdc++.h&amp;gt;using">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-01T07:02:02.795Z">
+<meta property="og:updated_time" content="2019-05-06T02:51:33.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU - 1548 A strange lift">
-<meta name="twitter:description" content="题目链接 题意每层电梯有一个数字num，在第i层楼梯中你按了上，那么你就会到达i + num 层或者是 i - num 层，当然这个层数 &amp;gt;= 1 &amp;amp;&amp;amp; &amp;lt;= n, 现在问你要从A层到达B层，最少需要按多少次按钮。 思路基础BFS，每层楼梯有两个相应的状态，然后不断搜索就行了。 1234567891011121314151617181920212223242526272">
+<meta name="twitter:title" content="数据结构之邻接矩阵存图">
+<meta name="twitter:description" content="本身邻接矩阵就是一个简单的二维数组，但是考虑到顶点的下标标号可能不是从1开始到的N结束的。所以用如下算法。当然你也可以离散化一下坐标再普通存图 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;bits/stdc++.h&amp;gt;using">
 
 
 
@@ -116,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/29/A-strange-lift/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/06/数据结构之邻接矩阵存图/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>HDU - 1548 A strange lift | 云腾致雨</title>
+  <title>数据结构之邻接矩阵存图 | 云腾致雨</title>
   
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/29/A-strange-lift/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/06/数据结构之邻接矩阵存图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HDU - 1548 A strange lift
+          <h1 class="post-title" itemprop="name headline">数据结构之邻接矩阵存图
 
               
             
@@ -389,24 +389,12 @@
                 
               
 
-              <time title="创建时间：2019-04-29 16:57:31" itemprop="dateCreated datePublished" datetime="2019-04-29T16:57:31+08:00">2019-04-29</time>
+              <time title="创建时间：2019-05-06 10:48:32 / 修改时间：10:51:33" itemprop="dateCreated datePublished" datetime="2019-05-06T10:48:32+08:00">2019-05-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-01 15:02:02" itemprop="dateModified" datetime="2019-05-01T15:02:02+08:00">2019-05-01</time>
               
             
           </span>
@@ -423,7 +411,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ACM题解/" itemprop="url" rel="index"><span itemprop="name">ACM题解</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
 
                 
                 
@@ -465,10 +453,8 @@
       
 
       
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1548" target="_blank" rel="noopener">题目链接</a></p>
-<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>每层电梯有一个数字num，在第i层楼梯中你按了上，那么你就会到达i + num 层或者是 i - num 层，当然这个层数 &gt;= 1 &amp;&amp; &lt;= n, 现在问你要从A层到达B层，最少需要按多少次按钮。</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>基础BFS，每层楼梯有两个相应的状态，然后不断搜索就行了。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">   <span class="keyword">int</span> x,time;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span> N,vis[<span class="number">201</span>],f[<span class="number">201</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> ed)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    node A,B;</span><br><span class="line">    <span class="built_in">queue</span>&lt;node&gt;Q;</span><br><span class="line">    A.x = st;</span><br><span class="line">    A.time = <span class="number">0</span>;</span><br><span class="line">    Q.push(A);</span><br><span class="line">    vis[st] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        A = Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        <span class="keyword">if</span>(A.x == ed)</span><br><span class="line">        <span class="keyword">return</span> A.time;</span><br><span class="line">        t = A.x + f[A.x];</span><br><span class="line">        <span class="keyword">if</span>(!vis[t] &amp;&amp; t &gt;= <span class="number">1</span> &amp;&amp; t &lt;= N)</span><br><span class="line">        &#123;</span><br><span class="line">            vis[t] = <span class="number">1</span>;</span><br><span class="line">            B.x = t;</span><br><span class="line">            B.time = A.time + <span class="number">1</span>;</span><br><span class="line">            Q.push(B);</span><br><span class="line">        &#125;</span><br><span class="line">        t = A.x - f[A.x];</span><br><span class="line">        <span class="keyword">if</span>(!vis[t] &amp;&amp; t &gt;= <span class="number">1</span> &amp;&amp; t &lt;= N)</span><br><span class="line">        &#123;</span><br><span class="line">            vis[t] = <span class="number">1</span>;</span><br><span class="line">            B.x = t;</span><br><span class="line">            B.time = A.time + <span class="number">1</span>;</span><br><span class="line">            Q.push(B);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> A,B;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; N &amp;&amp; N)&#123;</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; A &gt;&gt; B;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; f[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> c = bfs(A,B);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="number">-1</span>)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"-1"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>本身邻接矩阵就是一个简单的二维数组，但是考虑到顶点的下标标号可能不是从1开始到的N结束的。所以用如下算法。当然你也可以离散化一下坐标再普通存图</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Matrix</span>&#123;</span></span><br><span class="line">   <span class="keyword">int</span> vertex[<span class="number">101</span>];</span><br><span class="line">   <span class="keyword">int</span> M[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line">&#125;Graph;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">locate</span><span class="params">(Graph G, <span class="keyword">int</span> x,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(G.vertex[i] == x)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create</span><span class="params">(Graph &amp;G,<span class="keyword">int</span> n,<span class="keyword">int</span> arcnum)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,w;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; G.vertex[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j)</span><br><span class="line">        <span class="keyword">if</span>(i != j)</span><br><span class="line">        G.M[i][j] = G.M[j][i] = inf;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= arcnum; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; w;</span><br><span class="line">        <span class="keyword">int</span> A = locate(G,a,n);</span><br><span class="line">        <span class="keyword">int</span> B = locate(G,b,n);</span><br><span class="line">        G.M[A][B] = G.M[B][A] = w;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Graph G;</span><br><span class="line">    <span class="keyword">int</span> n,arcnum;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; arcnum;</span><br><span class="line">    create(G, n, arcnum);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n ; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d%c"</span>,G.M[i][j],j==n?<span class="string">'\n'</span>:<span class="string">' '</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -507,7 +493,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/bfs/" rel="tag"># bfs</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
@@ -520,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/28/哈夫曼树及哈夫曼编码/" rel="next" title="哈夫曼树及哈夫曼编码">
-                <i class="fa fa-chevron-left"></i> 哈夫曼树及哈夫曼编码
+              <a href="/2019/05/05/山东省第五届ACM省赛-总结/" rel="next" title="山东省第五届ACM省赛 总结">
+                <i class="fa fa-chevron-left"></i> 山东省第五届ACM省赛 总结
               </a>
             
           </div>
@@ -530,8 +516,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/29/HDU-变形课/" rel="prev" title="变形课">
-                变形课 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/06/数据结构之邻接表存储图/" rel="prev" title="数据结构之邻接表存储图">
+                数据结构之邻接表存储图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -581,17 +567,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -761,23 +738,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -963,7 +923,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/04/29/A-strange-lift/'
+    refer: '2019/05/06/数据结构之邻接矩阵存图/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
