@@ -106,7 +106,7 @@
 <meta property="og:description" content="题目链接 总结：这都是什么神仙题目，虽然说有简单的，但是感觉好几道题涉及到的知识点我以前没怎么重视过。看到师哥队昨晚这场比赛A了9道，本以为题目难度还行，看来是我高估自己了（师哥太强了）。好在是过的题目都是一遍过，罚时还是不错的。 A题给你一些人的身高和体重，先把身高从小到大排个序，然后奇数号是一个队，偶数号是一个队，然后我们需要看哪个队伍的体重大一些，体重大的就赢得最后的比赛。考察结构体排序。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yuntengzhiyu.github.io/2019/05/07/山东省第六届ACM比赛-总结/赛瓦定理.jpg">
-<meta property="og:updated_time" content="2019-05-08T04:14:48.201Z">
+<meta property="og:updated_time" content="2019-05-08T04:19:49.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="山东省第六届ACM比赛 总结">
 <meta name="twitter:description" content="题目链接 总结：这都是什么神仙题目，虽然说有简单的，但是感觉好几道题涉及到的知识点我以前没怎么重视过。看到师哥队昨晚这场比赛A了9道，本以为题目难度还行，看来是我高估自己了（师哥太强了）。好在是过的题目都是一遍过，罚时还是不错的。 A题给你一些人的身高和体重，先把身高从小到大排个序，然后奇数号是一个队，偶数号是一个队，然后我们需要看哪个队伍的体重大一些，体重大的就赢得最后的比赛。考察结构体排序。">
@@ -408,7 +408,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-08 12:14:48" itemprop="dateModified" datetime="2019-05-08T12:14:48+08:00">2019-05-08</time>
+                <time title="修改时间：2019-05-08 12:19:49" itemprop="dateModified" datetime="2019-05-08T12:19:49+08:00">2019-05-08</time>
               
             
           </span>
@@ -1012,6 +1012,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
