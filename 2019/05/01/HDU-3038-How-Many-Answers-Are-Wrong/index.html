@@ -47,19 +47,19 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg?v=7.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.jpg?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.jpg?v=7.1.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.jpg?v=7.1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.jpg?v=7.1.1">
 
 
-  <link rel="mask-icon" href="/images/1.jpg?v=7.1.0" color="#222">
+  <link rel="mask-icon" href="/images/1.jpg?v=7.1.1" color="#222">
 
 
 
@@ -72,7 +72,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.1.0',
+    version: '7.1.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: false,
@@ -814,7 +814,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
 
 
 
@@ -924,32 +924,32 @@
   
 
 
-  <script src="/js/utils.js?v=7.1.0"></script>
+  <script src="/js/utils.js?v=7.1.1"></script>
 
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.1.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+  <script src="/js/motion.js?v=7.1.1"></script>
 
 
 
   
-  <script src="/js/scrollspy.js?v=7.1.0"></script>
-<script src="/js/post-details.js?v=7.1.0"></script>
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
 
 
 
   
 
 
-  <script src="/js/next-boot.js?v=7.1.0"></script>
+  <script src="/js/next-boot.js?v=7.1.1"></script>
 
 
   
@@ -1031,7 +1031,7 @@
     }
   });
 </script>
-<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     
   
@@ -1055,7 +1055,7 @@
 
   
 <script>
-  $('.highlight').each(function(i, e) {
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
     var $wrap = $('<div>').addClass('highlight-wrap');
     $(e).after($wrap);
     $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
