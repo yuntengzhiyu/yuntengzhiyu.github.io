@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
-<meta name="keywords" content="数据结构,哈夫曼编码">
+  <meta name="description" content="How many 9s 看了很多题解，都是预处理的，尽管想想不预处理，其实算起来也挺快，看是数据很多，你必须保证O（1）就可以算出来，我的程序里每一次都是要循环比较多的，所以超时也就不难理解了。预处理出所有的日期，最后直接相减即可。这个模拟借鉴网上的代码，感觉写的挺漂亮。 代码1234567891011121314151617181920212223242526272829303132333435">
+<meta name="keywords" content="模拟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="哈夫曼树及哈夫曼编码">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/index.html">
+<meta property="og:title" content="How many 9s">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/09/How-many-9s/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
+<meta property="og:description" content="How many 9s 看了很多题解，都是预处理的，尽管想想不预处理，其实算起来也挺快，看是数据很多，你必须保证O（1）就可以算出来，我的程序里每一次都是要循环比较多的，所以超时也就不难理解了。预处理出所有的日期，最后直接相减即可。这个模拟借鉴网上的代码，感觉写的挺漂亮。 代码1234567891011121314151617181920212223242526272829303132333435">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T02:48:59.670Z">
+<meta property="og:updated_time" content="2019-05-09T01:47:34.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哈夫曼树及哈夫曼编码">
-<meta name="twitter:description" content="哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（">
+<meta name="twitter:title" content="How many 9s">
+<meta name="twitter:description" content="How many 9s 看了很多题解，都是预处理的，尽管想想不预处理，其实算起来也挺快，看是数据很多，你必须保证O（1）就可以算出来，我的程序里每一次都是要循环比较多的，所以超时也就不难理解了。预处理出所有的日期，最后直接相减即可。这个模拟借鉴网上的代码，感觉写的挺漂亮。 代码1234567891011121314151617181920212223242526272829303132333435">
 
 
 
@@ -116,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/09/How-many-9s/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>哈夫曼树及哈夫曼编码 | 云腾致雨</title>
+  <title>How many 9s | 云腾致雨</title>
   
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/04/28/哈夫曼树及哈夫曼编码/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/09/How-many-9s/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">哈夫曼树及哈夫曼编码
+          <h1 class="post-title" itemprop="name headline">How many 9s
 
               
             
@@ -389,24 +389,12 @@
                 
               
 
-              <time title="创建时间：2019-04-28 22:05:00" itemprop="dateCreated datePublished" datetime="2019-04-28T22:05:00+08:00">2019-04-28</time>
+              <time title="创建时间：2019-05-09 09:42:48 / 修改时间：09:47:34" itemprop="dateCreated datePublished" datetime="2019-05-09T09:42:48+08:00">2019-05-09</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-06 10:48:59" itemprop="dateModified" datetime="2019-05-06T10:48:59+08:00">2019-05-06</time>
               
             
           </span>
@@ -423,7 +411,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ACM题解/" itemprop="url" rel="index"><span itemprop="name">ACM题解</span></a></span>
 
                 
                 
@@ -465,8 +453,9 @@
       
 
       
-        <p>哈夫曼树又称最优树，是一类带权路径长度最短的树。在本例中我们用它对字符进行编码。首先先创建一个哈夫曼树，然后从叶子节点开始往根上寻找路线，是左子树则编码为0，右子树编码为1. 有一个步骤我们需要将最小的两个权值的叶子结点合并成一个节点，同时还要删除这两个节点，我用的是优先队列，优先队列出来的是权值最小的点，我们把他们合并之后可以很容易的删除。同时要注意哈夫曼树并不唯一，但是他们都具有最小的WPL（树的带权路径长度）。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Tnode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> w;</span><br><span class="line">    <span class="keyword">int</span> pos;</span><br><span class="line">    <span class="keyword">int</span> parent,lchild,rchild;</span><br><span class="line">     <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Tnode &amp;a)<span class="keyword">const</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">return</span> a.w &lt; w;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;Tnode,*tree;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">priority_queue&lt;Tnode&gt;P;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">select</span><span class="params">(tree &amp;HT,<span class="keyword">int</span> &amp;s1, <span class="keyword">int</span> &amp;s2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Tnode t = P.top();</span><br><span class="line">    s1 = t.pos;</span><br><span class="line">    P.pop();</span><br><span class="line">    t = P.top();</span><br><span class="line">    s2 = t.pos;</span><br><span class="line">    P.pop();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huffmantree</span><span class="params">(tree &amp;HT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = <span class="number">2</span> * n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> s1,s2;</span><br><span class="line">    HT = <span class="keyword">new</span> Tnode[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m ;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        HT[i].parent = HT[i].lchild = HT[i].rchild = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; HT[i].w;</span><br><span class="line">        HT[i].pos = i;</span><br><span class="line">        P.push(HT[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = n + <span class="number">1</span>; i &lt;= m ;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        select(HT ,s1, s2);</span><br><span class="line">        HT[s1].parent = i;</span><br><span class="line">        HT[s2].parent = i;</span><br><span class="line">        HT[i].lchild = s1;</span><br><span class="line">        HT[i].rchild = s2;</span><br><span class="line">        HT[i].w = HT[s1].w + HT[s2].w;</span><br><span class="line">        HT[i].pos = i ;</span><br><span class="line">        P.push(HT[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huffmancode</span><span class="params">(tree &amp;HT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> index = i;</span><br><span class="line">        <span class="keyword">int</span> p = HT[i].parent;</span><br><span class="line">        <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(HT[p].lchild == index)</span><br><span class="line">                s[i] += <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                s[i] += <span class="string">'1'</span>;</span><br><span class="line">            index = p;</span><br><span class="line">            p = HT[p].parent;</span><br><span class="line">        &#125;</span><br><span class="line">        reverse(s[i].begin(),s[i].end());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    tree HT;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    huffmantree(HT);</span><br><span class="line">    huffmancode(HT);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个字符的权值为："</span> &lt;&lt; HT[i].w &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个字符的哈夫曼编码为:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; s[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p><a href="https://vjudge.net/contest/294616#problem/C" target="_blank" rel="noopener">How many 9s</a></p>
+<p>看了很多题解，都是预处理的，尽管想想不预处理，其实算起来也挺快，看是数据很多，你必须保证O（1）就可以算出来，我的程序里每一次都是要循环比较多的，所以超时也就不难理解了。预处理出所有的日期，最后直接相减即可。这个模拟借鉴网上的代码，感觉写的挺漂亮。</p>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> mon[<span class="number">13</span>] = &#123;<span class="number">0</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">leap</span><span class="params">(<span class="keyword">int</span> year)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>((year % <span class="number">400</span> == <span class="number">0</span>) || (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span>))</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(num)</span><br><span class="line">    &#123;</span><br><span class="line">        sum += (num % <span class="number">10</span> == <span class="number">9</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        num /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">num</span><span class="params">(<span class="keyword">int</span> y,<span class="keyword">int</span> m,<span class="keyword">int</span> d)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    sum += check(y) + check(m) + check(d);</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> sum[<span class="number">10005</span>][<span class="number">15</span>][<span class="number">32</span>], pre[<span class="number">10005</span>][<span class="number">15</span>][<span class="number">32</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calculate</span><span class="params">(<span class="keyword">int</span> y1,<span class="keyword">int</span> m1,<span class="keyword">int</span> d1,<span class="keyword">int</span> y2,<span class="keyword">int</span> m2,<span class="keyword">int</span> d2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tem = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(y1 != y2 || m1 != m2 || d1 != d2)</span><br><span class="line">    &#123;</span><br><span class="line">        mon[<span class="number">2</span>] = leap(y1) + <span class="number">28</span>;</span><br><span class="line">        pre[y1][m1][d1] = tem;</span><br><span class="line">        tem +=  num(y1,m1,d1);</span><br><span class="line">        sum[y1][m1][d1] = tem;</span><br><span class="line">        <span class="keyword">if</span>( ++d1 &gt; mon[m1])</span><br><span class="line">        &#123;</span><br><span class="line">            d1 = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(++ m1 &gt; <span class="number">12</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    m1 = <span class="number">1</span>;</span><br><span class="line">                    y1++;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    calculate(<span class="number">2000</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">10000</span>,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> t,y1,m1,d1,y2,m2,d2;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d %d %d %d %d"</span>,&amp;y1,&amp;m1,&amp;d1,&amp;y2,&amp;m2,&amp;d2);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,sum[y2][m2][d2] - pre[y1][m1][d1]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -505,9 +494,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
-          
-            <a href="/tags/哈夫曼编码/" rel="tag"># 哈夫曼编码</a>
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
           
         </div>
       
@@ -520,8 +507,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/27/my-first-blog/" rel="next" title="my first blog">
-                <i class="fa fa-chevron-left"></i> my first blog
+              <a href="/2019/05/08/square numbers/" rel="next" title="square numbers">
+                <i class="fa fa-chevron-left"></i> square numbers
               </a>
             
           </div>
@@ -529,10 +516,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/29/A-strange-lift/" rel="prev" title="HDU - 1548 A strange lift">
-                HDU - 1548 A strange lift <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -581,8 +564,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -760,6 +752,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -945,7 +954,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/04/28/哈夫曼树及哈夫曼编码/'
+    refer: '2019/05/09/How-many-9s/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
