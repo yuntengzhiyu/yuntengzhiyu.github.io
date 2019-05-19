@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script type="text/javascript" src="/js/love.js"></script>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.jpg?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.jpg?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/1.jpg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="忙活了大约整个白天吧，整体算是写完了，不知道后期还会不会加上文件的应用。 虽然看代码是比较简单，但是我感觉难度在于对整体轮廓的把握，必须先在整体构思好了才能写。常常是一个函数删了又加上，再删掉。其余的一些格式的控制包括颜色，光标，也学习到了很多课本上没有的东西。除了引用了移动光标的三行代码，其他的都是纯手敲，好累啊,不过也好有成就^_^。 123456789101112131415161718">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构之学生信息管理系统">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/19/数据结构之学生信息管理系统/index.html">
+<meta property="og:site_name" content="云腾致雨">
+<meta property="og:description" content="忙活了大约整个白天吧，整体算是写完了，不知道后期还会不会加上文件的应用。 虽然看代码是比较简单，但是我感觉难度在于对整体轮廓的把握，必须先在整体构思好了才能写。常常是一个函数删了又加上，再删掉。其余的一些格式的控制包括颜色，光标，也学习到了很多课本上没有的东西。除了引用了移动光标的三行代码，其他的都是纯手敲，好累啊,不过也好有成就^_^。 123456789101112131415161718">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-19T09:04:35.138Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据结构之学生信息管理系统">
+<meta name="twitter:description" content="忙活了大约整个白天吧，整体算是写完了，不知道后期还会不会加上文件的应用。 虽然看代码是比较简单，但是我感觉难度在于对整体轮廓的把握，必须先在整体构思好了才能写。常常是一个函数删了又加上，再删掉。其余的一些格式的控制包括颜色，光标，也学习到了很多课本上没有的东西。除了引用了移动光标的三行代码，其他的都是纯手敲，好累啊,不过也好有成就^_^。 123456789101112131415161718">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/19/数据结构之学生信息管理系统/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数据结构之学生信息管理系统 | 云腾致雨</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">云腾致雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">云腾致雨，露结为霜</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/19/数据结构之学生信息管理系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="云腾致雨">
+      <meta itemprop="description" content="不畏艰险，乘风破浪">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="云腾致雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据结构之学生信息管理系统
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-19 16:57:42 / 修改时间：17:04:35" itemprop="dateCreated datePublished" datetime="2019-05-19T16:57:42+08:00">2019-05-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>  忙活了大约整个白天吧，整体算是写完了，不知道后期还会不会加上文件的应用。 虽然看代码是比较简单，但是我感觉难度在于对整体轮廓的把握，必须先在整体构思好了才能写。常常是一个函数删了又加上，再删掉。其余的一些格式的控制包括颜色，光标，也学习到了很多课本上没有的东西。除了引用了移动光标的三行代码，其他的都是纯手敲，<del>好累啊,不过也好有成就^_^</del>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> clc system(<span class="meta-string">"cls"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> color system(<span class="meta-string">"color F1"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">score</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> chinese;</span><br><span class="line">    <span class="keyword">int</span> math;</span><br><span class="line">    <span class="keyword">int</span> english;</span><br><span class="line">    <span class="keyword">int</span> tec;      <span class="comment">//代表理综成绩</span></span><br><span class="line">    <span class="keyword">int</span> all;        <span class="comment">//总成绩</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="built_in">string</span> number;   <span class="comment">//学号</span></span><br><span class="line">    <span class="keyword">char</span> sex;      <span class="comment">//性别</span></span><br><span class="line">    <span class="built_in">string</span> phonenum;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">score</span> <span class="title">score</span>;</span></span><br><span class="line">&#125; stu[<span class="number">2001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp1</span><span class="params">(student a, student b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.name &lt; b.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp2</span><span class="params">(student a, student b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.number &lt; b.number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp3</span><span class="params">(student a, student b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.score.all &gt; b.score.all;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp4</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> student &amp;a, <span class="keyword">const</span> student &amp;b)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a.score.all &lt; b.score.all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">checkstu</span><span class="params">()</span></span>;         <span class="comment">//检查学生信息录入情况." &lt;&lt; '\n';</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inputscore</span><span class="params">()</span></span>;           <span class="comment">//学生成绩录入</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_number</span><span class="params">()</span></span>;               <span class="comment">//将成绩按照学号排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_score</span><span class="params">()</span></span>;                       <span class="comment">//将成绩按照成绩大小排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change_score</span><span class="params">()</span></span>;                   <span class="comment">//对成绩进行修改.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_rank</span><span class="params">()</span></span>;                        <span class="comment">//显示总成绩排名(学生用)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">del_score</span><span class="params">()</span></span>;                      <span class="comment">//删除成绩</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_name</span><span class="params">()</span></span>;                    <span class="comment">//按照名字的字典序排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">input_message</span><span class="params">()</span></span>;                  <span class="comment">//输入学生自己的信息</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_selfscore</span><span class="params">()</span></span>;                   <span class="comment">//查看学生自己的个人成绩</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change_selfmessage</span><span class="params">()</span></span>;                  <span class="comment">//改变个人的信息</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_teachermenu</span><span class="params">()</span></span>;                    <span class="comment">//显示教师端</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_stumenu</span><span class="params">()</span></span>;                      <span class="comment">//显示学生端</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_score</span><span class="params">()</span></span>;                           <span class="comment">//显示各种排序后的成绩</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> tot ;     <span class="comment">//cnt记录学生的个数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_score</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"学号"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"语文"</span> &lt;&lt; setw(<span class="number">8</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"数学"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"英语"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"理综"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"总分"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].name &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].number &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].score.chinese;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].score.math &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].score.english &lt;&lt; setw(<span class="number">8</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; stu[i].score.tec &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].score.all &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">toxy</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span>    <span class="comment">//移动光标</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    COORD pos= &#123;x,y&#125;;</span><br><span class="line">    HANDLE Out=GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">    SetConsoleCursorPosition(Out,pos);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">checkstu</span><span class="params">()</span>          <span class="comment">//检查学生信息录入情况.(查看目前已经上传信息的学生)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"学号"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt;  <span class="string">"性别"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"电话"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].name &lt;&lt; setw(<span class="number">8</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; stu[i].number &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; stu[i].sex &lt;&lt; setw(<span class="number">8</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; stu[i].phonenum &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车键即可返回。"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inputscore</span><span class="params">()</span>               <span class="comment">//学生成绩录入</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"姓名   语文  数学  英语  理综"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; stu[i].name &lt;&lt; <span class="string">"  "</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; stu[i].score.chinese &gt;&gt; stu[i].score.math &gt;&gt; stu[i].score.english;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; stu[i].score.tec;</span><br><span class="line">        stu[i].score.all = stu[i].score.chinese + stu[i].score.math + stu[i].score.english;</span><br><span class="line">        stu[i].score.all += stu[i].score.tec;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车键返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_score</span><span class="params">()</span>                        <span class="comment">//将成绩按照成绩大小排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    sort(stu + <span class="number">1</span>, stu + tot + <span class="number">1</span>, cmp3);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"排序成功。"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    show_score();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"按回车即可保存并返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change_score</span><span class="params">()</span>                    <span class="comment">//对成绩进行修改.</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您要修改的对应学生的姓名:"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot ; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(stu[i].name == s)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新输入他的语文成绩；"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].score.chinese;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新输入他的数学成绩；"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].score.math;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新输入他的英语成绩；"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].score.english;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新输入他的理综成绩；"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].score.tec;</span><br><span class="line">            stu[i].score.all = stu[i].score.chinese + stu[i].score.math + stu[i].score.english + stu[i].score.tec;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车返回: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">del_score</span><span class="params">()</span>                       <span class="comment">//删除成绩</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您要删除的学生的姓名:"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">int</span> index;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(stu[i].name == s)</span><br><span class="line">        &#123;</span><br><span class="line">            index = i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = index; i + <span class="number">1</span> &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        stu[i] = stu[i + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    tot--;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"按回车即可保存并返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_name</span><span class="params">()</span>                     <span class="comment">//按照名字的字典序排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    sort(stu + <span class="number">1</span>, stu + tot + <span class="number">1</span>,cmp1);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"排序成功。"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    show_score();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"按回车即可保存并返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_number</span><span class="params">()</span>                   <span class="comment">//按照学号大小进行排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    sort(stu + <span class="number">1</span>, stu + tot + <span class="number">1</span>, cmp2);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"排序成功."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    show_score();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"按回车即可保存并返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">input_message</span><span class="params">()</span>                    <span class="comment">//输入学生自己的信息</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的姓名: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; stu[++tot].name;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的学号: (后两位即可)"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; stu[tot].number;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的性别: (M男  F女)"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; stu[tot].sex ;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的电话号码: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; stu[tot].phonenum;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"按回车即可保存并返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_selfscore</span><span class="params">()</span>                    <span class="comment">//查看学生自己的个人成绩</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的名字: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(stu[i].name == s)</span><br><span class="line">        &#123;</span><br><span class="line">            flag = <span class="number">1</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"语文: %d\n"</span>, stu[i].score.chinese);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"数学: %d\n"</span>, stu[i].score.math);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"英语: %d\n"</span>, stu[i].score.english);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"理综: %d\n"</span>, stu[i].score.tec);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"总成绩: %d\n"</span>, stu[i].score.all);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!flag)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"抱歉，您还未录入信息."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车键返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show_rank</span><span class="params">()</span>                     <span class="comment">//显示全班成绩,只是显示</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    priority_queue&lt;student, <span class="built_in">vector</span>&lt;student&gt;, cmp4 &gt;P;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        P.push(stu[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"学号"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt;  <span class="string">"语文"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"数学"</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"英语"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; <span class="string">"理综"</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt;  <span class="string">"总分"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">while</span>(!P.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        student a = P.top();</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.name &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.number &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.score.chinese &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.score.math &lt;&lt; setw(<span class="number">8</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a.score.english &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.score.tec &lt;&lt; setw(<span class="number">8</span>) &lt;&lt; a.score.all &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        P.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车键返回."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change_selfmessage</span><span class="params">()</span>                   <span class="comment">//改变个人的信息</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    clc;</span><br><span class="line">    color;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的名字: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= tot; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(stu[i].name == s)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新修改您的学号: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].number ;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新修改您的性别: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].sex ;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"请重新修改您的电话号码: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; stu[i].phonenum;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请按回车键返回并保存: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="built_in">string</span> c;</span><br><span class="line">    getline(<span class="built_in">cin</span>,c);</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="string">"\n"</span>)</span><br><span class="line">        print_stumenu();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printmenu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    color;</span><br><span class="line">    clc;</span><br><span class="line">    toxy(<span class="number">20</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"*****欢迎来到学生信息管理系统!*****"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请说明您是 1. 老师"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"           2. 学生"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">    <span class="keyword">if</span>(num == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        clc;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的老师验证码: (123456)"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">        <span class="keyword">while</span>(s != <span class="string">"123456"</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"您的输入错误，请重新输入: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s == <span class="string">"123456"</span>)</span><br><span class="line">            print_teachermenu();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(num == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        clc;</span><br><span class="line">        print_stumenu();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_teachermenu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        clc;</span><br><span class="line">        color;</span><br><span class="line">        toxy(<span class="number">20</span>,<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"***欢迎来到教师端.***"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"1. 检查学生信息录入情况."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"2. 学生成绩录入."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"3. 将成绩按照学号排序."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"4. 将成绩按照成绩大小排序."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"5. 对成绩进行修改."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"6. 删除成绩."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"7. 返回主菜单."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"8. 按照名字的字典序排序"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入您的操作数字: "</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">        <span class="keyword">switch</span>(num)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            checkstu();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            inputscore();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            sort_number();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            sort_score();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            change_score();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            del_score();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            printmenu();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">8</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            sort_name();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"非法数字."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_stumenu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        clc;</span><br><span class="line">        color;</span><br><span class="line">        toxy(<span class="number">20</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"*****欢迎来到学生端*****"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"1. 输入学生个人基本信息."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"2. 查看个人成绩."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"3. 查看所在班级成绩排名."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"4. 查看所在班级学生基本信息."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"5. 修改个人基本信息"</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"6. 返回主菜单."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">        <span class="keyword">switch</span>(num)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            input_message();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            show_selfscore();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            show_rank();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            checkstu();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            change_selfmessage();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            printmenu();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"非法字符."</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    tot = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">2000</span>; ++i)             <span class="comment">//初始化操作</span></span><br><span class="line">    &#123;</span><br><span class="line">        stu[i].score.all = stu[i].score.chinese = <span class="number">0</span>;</span><br><span class="line">        stu[i].score.chinese = stu[i].score.english = <span class="number">0</span>;</span><br><span class="line">        stu[i].score.math = stu[i].score.tec = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    printmenu();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/15/算法竞赛入门经典-第三章例题/" rel="next" title="算法竞赛入门经典 第三章例题">
+                <i class="fa fa-chevron-left"></i> 算法竞赛入门经典 第三章例题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80Mzk1MS8yMDQ4Nw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.jpg" alt="云腾致雨">
+            
+              <p class="site-author-name" itemprop="name">云腾致雨</p>
+              <div class="site-description motion-element" itemprop="description">不畏艰险，乘风破浪</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/yuntengzhiyu" title="GitHub &rarr; https://github.com/yuntengzhiyu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=1264278219&site=qq&menu=yes" title="QQ &rarr; http://wpa.qq.com/msgrd?v=3&uin=1264278219&site=qq&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://fireworks99.github.io" title="http://fireworks99.github.io" rel="noopener" target="_blank">市井烟火气</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://me.csdn.net/qq_43813493" title="https://me.csdn.net/qq_43813493" rel="noopener" target="_blank">記柔刀</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://alberts97.github.io" title="https://alberts97.github.io" rel="noopener" target="_blank">咸鱼の小窝</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.csdn.net/weixin_43918531?t=1" title="https://blog.csdn.net/weixin_43918531?t=1" rel="noopener" target="_blank">My csdn</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">云腾致雨</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2019/05/19/数据结构之学生信息管理系统/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
