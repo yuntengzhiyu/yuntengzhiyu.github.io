@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。 思路种类并查集，依旧是用带权的思想，类似食物链中的偏移量。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &amp;lt;bits/stdc">
+  <meta name="description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。">
 <meta name="keywords" content="并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 1829 - A Bug&#39;s Life">
 <meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/01/HDU-1829-A-Bug-s-Life/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。 思路种类并查集，依旧是用带权的思想，类似食物链中的偏移量。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &amp;lt;bits/stdc">
+<meta property="og:description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-01T07:02:32.066Z">
+<meta property="og:updated_time" content="2019-05-20T15:18:12.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 1829 - A Bug&#39;s Life">
-<meta name="twitter:description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。 思路种类并查集，依旧是用带权的思想，类似食物链中的偏移量。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &amp;lt;bits/stdc">
+<meta name="twitter:description" content="题目链接: A Bug’s Life 题意输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。">
 
 
 
@@ -389,12 +389,24 @@
                 
               
 
-              <time title="创建时间：2019-05-01 13:59:43 / 修改时间：15:02:32" itemprop="dateCreated datePublished" datetime="2019-05-01T13:59:43+08:00">2019-05-01</time>
+              <time title="创建时间：2019-05-01 13:59:43" itemprop="dateCreated datePublished" datetime="2019-05-01T13:59:43+08:00">2019-05-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-20 23:18:12" itemprop="dateModified" datetime="2019-05-20T23:18:12+08:00">2019-05-20</time>
               
             
           </span>
@@ -455,6 +467,7 @@
       
         <p>题目链接: <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1829" target="_blank" rel="noopener">A Bug’s Life</a></p>
 <h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>输入A B  代表A 喜欢 B，现在问你输入的数据里是否会出现同性恋。</p>
+<a id="more"></a>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>种类并查集，依旧是用带权的思想，类似食物链中的偏移量。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> val[<span class="number">10001</span>],f[<span class="number">10001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != f[x])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = f[x];</span><br><span class="line">        f[x] = Find(f[x]);</span><br><span class="line">        val[x] = (val[x] + val[t]) % <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f[x];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N, M, t, a, b, caser = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Scenario #%d:\n"</span>,caser++);</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            f[i] = i;</span><br><span class="line">            val[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= M; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            <span class="keyword">int</span> fa = Find(a);</span><br><span class="line">            <span class="keyword">int</span> fb = Find(b);</span><br><span class="line">            <span class="keyword">if</span>(fa != fb)</span><br><span class="line">            &#123;</span><br><span class="line">                f[fa] = fb;</span><br><span class="line">                val[fa] = (<span class="number">1</span> + val[b] - val[a]) % <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(val[a] == val[b])</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Suspicious bugs found!\n"</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"No suspicious bugs found!\n"</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
