@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="云腾致雨">
 <meta property="og:description" content="博弈题目(三)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-23T13:37:00.928Z">
+<meta property="og:updated_time" content="2019-05-23T13:39:52.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博弈题目(三)">
 <meta name="twitter:description" content="博弈题目(三)">
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-05-23 12:23:11 / 修改时间：21:37:00" itemprop="dateCreated datePublished" datetime="2019-05-23T12:23:11+08:00">2019-05-23</time>
+              <time title="创建时间：2019-05-23 12:23:11 / 修改时间：21:39:52" itemprop="dateCreated datePublished" datetime="2019-05-23T12:23:11+08:00">2019-05-23</time>
             
 
             
@@ -475,7 +475,7 @@
 </li>
 </ol>
 <p><a href="https://vjudge.net/contest/286681#problem/H" target="_blank" rel="noopener">HDU - 3032</a></p>
-<h4 id="NIM-or-not-NIM"><a href="#NIM-or-not-NIM" class="headerlink" title="NIM or not NIM"></a>NIM or not NIM</h4><h4 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h4><p>可以对一堆进行两种操作，问题是一堆中的石子数是很多的，求sg打表超时，后来发现sg也是有规律的，找出规律就和普通NIM一样了。</p>
+<h4 id="NIM-or-not-NIM"><a href="#NIM-or-not-NIM" class="headerlink" title="NIM or not NIM"></a>NIM or not NIM</h4><h5 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h5><p>可以对一堆进行两种操作，问题是一堆中的石子数是很多的，求sg打表超时，后来发现sg也是有规律的，找出规律就和普通NIM一样了。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getSG</span><span class="params">()</span>    <span class="comment">//打表函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sg[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span> , <span class="keyword">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= i; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            vis[sg[i - j]] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            vis[sg[i - j]^sg[j]] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; ; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(!vis[j])</span><br><span class="line">            &#123;</span><br><span class="line">                sg[i] = j;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>主代码</li>
@@ -800,7 +800,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Euclid’s-Game"><span class="nav-number">1.</span> <span class="nav-text">Euclid’s Game</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取石子游戏"><span class="nav-number">2.</span> <span class="nav-text">取石子游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#思路-1"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NIM-or-not-NIM"><span class="nav-number">3.</span> <span class="nav-text">NIM or not NIM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#思路-2"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Euclid’s-Game"><span class="nav-number">1.</span> <span class="nav-text">Euclid’s Game</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取石子游戏"><span class="nav-number">2.</span> <span class="nav-text">取石子游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#思路-1"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NIM-or-not-NIM"><span class="nav-number">3.</span> <span class="nav-text">NIM or not NIM</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#思路-2"><span class="nav-number">3.1.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
             
 
           </div>
