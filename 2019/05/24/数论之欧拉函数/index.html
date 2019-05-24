@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="云腾致雨">
 <meta property="og:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)$$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T15:11:15.355Z">
+<meta property="og:updated_time" content="2019-05-24T15:17:42.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论之欧拉函数">
 <meta name="twitter:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)$$">
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-05-24 20:25:48 / 修改时间：23:11:15" itemprop="dateCreated datePublished" datetime="2019-05-24T20:25:48+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 20:25:48 / 修改时间：23:17:42" itemprop="dateCreated datePublished" datetime="2019-05-24T20:25:48+08:00">2019-05-24</time>
             
 
             
@@ -462,10 +462,9 @@
 <h4 id="分解质因数求欧拉函数"><a href="#分解质因数求欧拉函数" class="headerlink" title="分解质因数求欧拉函数:"></a>分解质因数求欧拉函数:</h4><p>注意的是，如果最终n&gt;1， 说明n也是一个质因子了，那么就要把它也算进去。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">int</span> ans = n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i * i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(n % i == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans = ans /i * (i - <span class="number">1</span>);        <span class="comment">//kuangbin中是ans -= ans/i;  这个肯定不会溢出</span></span><br><span class="line">            <span class="keyword">while</span>(n % i == <span class="number">0</span>)</span><br><span class="line">                n /= i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(n &gt; <span class="number">1</span>) ans = ans / n * (n - <span class="number">1</span>);         </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="欧拉函数打表（类似埃氏筛法）"><a href="#欧拉函数打表（类似埃氏筛法）" class="headerlink" title="欧拉函数打表（类似埃氏筛法）"></a>欧拉函数打表（类似埃氏筛法）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getphi</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        phi[i] = i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(phi[i] == i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt;= n; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                phi[j] = phi[j]/i * (i - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="欧拉函数线性筛法（可以得到欧拉函数和素数表）"><a href="#欧拉函数线性筛法（可以得到欧拉函数和素数表）" class="headerlink" title="欧拉函数线性筛法（可以得到欧拉函数和素数表）"></a>欧拉函数线性筛法（可以得到欧拉函数和素数表）</h4><p>需要用到以下三条性质，这里不作证明</p>
+<h4 id="欧拉函数线性筛法（可以得到欧拉函数和素数表）"><a href="#欧拉函数线性筛法（可以得到欧拉函数和素数表）" class="headerlink" title="欧拉函数线性筛法（可以得到欧拉函数和素数表）"></a>欧拉函数线性筛法（可以得到欧拉函数和素数表）</h4><p>需要用到以下三条性质，这里不作证明(第一条p为质数)</p>
 <ol>
-<li><p>若P为质数</p>
-<p>$phi[p] = p - 1$</p>
+<li><p>$$phi[p] = p - 1$$</p>
 </li>
 <li><p>$$ i \mod p = 0   \to phi[i \times p] = phi[i] \times p$$</p>
 </li>
