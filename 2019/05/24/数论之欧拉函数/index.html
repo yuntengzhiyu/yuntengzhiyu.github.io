@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)$$">
+  <meta name="description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})$$">
 <meta name="keywords" content="欧拉函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论之欧拉函数">
 <meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/24/数论之欧拉函数/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)$$">
+<meta property="og:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})$$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T15:17:42.634Z">
+<meta property="og:updated_time" content="2019-05-29T15:54:32.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论之欧拉函数">
-<meta name="twitter:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)$$">
+<meta name="twitter:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})$$">
 
 
 
@@ -389,12 +389,24 @@
                 
               
 
-              <time title="创建时间：2019-05-24 20:25:48 / 修改时间：23:17:42" itemprop="dateCreated datePublished" datetime="2019-05-24T20:25:48+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 20:25:48" itemprop="dateCreated datePublished" datetime="2019-05-24T20:25:48+08:00">2019-05-24</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-29 23:54:32" itemprop="dateModified" datetime="2019-05-29T23:54:32+08:00">2019-05-29</time>
               
             
           </span>
@@ -453,7 +465,7 @@
       
 
       
-        <p>欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.<br>$$<br>\phi(x) = x \times (1 - 1/p_1) + x \times(1-1/p_2) +x \times(1 - 1/p_n)<br>$$<br><a id="more"></a></p>
+        <p>欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.<br>$$<br>\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})<br>$$<br><a id="more"></a></p>
 <h3 id="这里介绍一些相关的知识"><a href="#这里介绍一些相关的知识" class="headerlink" title="这里介绍一些相关的知识:"></a>这里介绍一些相关的知识:</h3><p>1.一个算术函数f，如果对于两个互素整数m,n有f(nm)=f(n)<em>f(m)则称f为积性函数。如果对于任意两个正整数mn有f(nm)=f(n)</em>f(m)则称f为完全积性函数 。</p>
 <p>2.如果f是一个积性函数，则对于正整数$$ n = p_1^{a_1} \times p_2^{a_2} \times p_n^{a_n}$$（pi为素数）(这里是唯一分解定理)，则$$ f(n)=f(p_1^{a_1})\times f(p_2^{a_2}) \times f(p_n^{a_n}) $$</p>
 <h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p>现在回归欧拉函数，看公式中的字母：</p>
