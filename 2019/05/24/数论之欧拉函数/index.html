@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="云腾致雨">
 <meta property="og:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})$$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-29T15:54:32.487Z">
+<meta property="og:updated_time" content="2019-05-30T11:33:04.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论之欧拉函数">
 <meta name="twitter:description" content="欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.$$\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})$$">
@@ -406,7 +406,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-29 23:54:32" itemprop="dateModified" datetime="2019-05-29T23:54:32+08:00">2019-05-29</time>
+                <time title="修改时间：2019-05-30 19:33:04" itemprop="dateModified" datetime="2019-05-30T19:33:04+08:00">2019-05-30</time>
               
             
           </span>
@@ -466,7 +466,7 @@
 
       
         <p>欧拉函数，用$\phi(n)$ 表示 ，指的是小于等于n的数中与n互质的数的数目，欧拉函数是一个积性函数.<br>$$<br>\phi(x) = x \times (1 -\frac{ 1}{p_1}) + x \times(1-\frac{1}{p_2}) +x \times(1 - \frac{1}{p_n})<br>$$<br><a id="more"></a></p>
-<h3 id="这里介绍一些相关的知识"><a href="#这里介绍一些相关的知识" class="headerlink" title="这里介绍一些相关的知识:"></a>这里介绍一些相关的知识:</h3><p>1.一个算术函数f，如果对于两个互素整数m,n有f(nm)=f(n)<em>f(m)则称f为积性函数。如果对于任意两个正整数mn有f(nm)=f(n)</em>f(m)则称f为完全积性函数 。</p>
+<h3 id="这里介绍一些相关的知识"><a href="#这里介绍一些相关的知识" class="headerlink" title="这里介绍一些相关的知识:"></a>这里介绍一些相关的知识:</h3><p>1.一个算术函数f，如果对于两个互素整数m,n有f(nm)=f(n)<em>f(m)则称 f为积性函数。如果对于任意两个正整数mn有f(nm)=f(n)</em>f(m)则称f为完全积性函数 。</p>
 <p>2.如果f是一个积性函数，则对于正整数$$ n = p_1^{a_1} \times p_2^{a_2} \times p_n^{a_n}$$（pi为素数）(这里是唯一分解定理)，则$$ f(n)=f(p_1^{a_1})\times f(p_2^{a_2}) \times f(p_n^{a_n}) $$</p>
 <h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p>现在回归欧拉函数，看公式中的字母：</p>
 <p>其中p指的是x的质因子。（注意的是$\phi(1) = 1$，当两个数字的公因数只有1的时候，就说两个数字互质）</p>
@@ -499,7 +499,6 @@
 <p>$$ a^b \mod p = (a \mod p)^{b \mod (p - 1)} \mod p $$</p>
 <p>还有一个真伪性我还没有验证的公式，先记录下来:</p>
 <p>$$ a^b\mod p = (a\mod p )^{\phi(p) + b \mod \phi(p)} \mod p $$        //这里可以摆脱a 和 p互质的束缚</p>
-<h4 id="几道相关的题目"><a href="#几道相关的题目" class="headerlink" title="几道相关的题目"></a>几道相关的题目</h4><p><a href="http://acm.hdu.edu.cn/status.php" target="_blank" rel="noopener">HDU - 2824</a></p>
 
       
     </div>
@@ -639,7 +638,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -735,7 +734,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">24</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -825,7 +828,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#这里介绍一些相关的知识"><span class="nav-number">1.</span> <span class="nav-text">这里介绍一些相关的知识:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数"><span class="nav-number">2.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分解质因数求欧拉函数"><span class="nav-number">2.1.</span> <span class="nav-text">分解质因数求欧拉函数:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数打表（类似埃氏筛法）"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉函数打表（类似埃氏筛法）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数线性筛法（可以得到欧拉函数和素数表）"><span class="nav-number">2.3.</span> <span class="nav-text">欧拉函数线性筛法（可以得到欧拉函数和素数表）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数的重要性质"><span class="nav-number">2.4.</span> <span class="nav-text">欧拉函数的重要性质:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉定理"><span class="nav-number">2.5.</span> <span class="nav-text">欧拉定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉定理的应用"><span class="nav-number">2.6.</span> <span class="nav-text">欧拉定理的应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#几道相关的题目"><span class="nav-number">2.7.</span> <span class="nav-text">几道相关的题目</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#这里介绍一些相关的知识"><span class="nav-number">1.</span> <span class="nav-text">这里介绍一些相关的知识:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数"><span class="nav-number">2.</span> <span class="nav-text">欧拉函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分解质因数求欧拉函数"><span class="nav-number">2.1.</span> <span class="nav-text">分解质因数求欧拉函数:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数打表（类似埃氏筛法）"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉函数打表（类似埃氏筛法）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数线性筛法（可以得到欧拉函数和素数表）"><span class="nav-number">2.3.</span> <span class="nav-text">欧拉函数线性筛法（可以得到欧拉函数和素数表）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数的重要性质"><span class="nav-number">2.4.</span> <span class="nav-text">欧拉函数的重要性质:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉定理"><span class="nav-number">2.5.</span> <span class="nav-text">欧拉定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉定理的应用"><span class="nav-number">2.6.</span> <span class="nav-text">欧拉定理的应用</span></a></li></ol></li></ol></div>
             
 
           </div>
