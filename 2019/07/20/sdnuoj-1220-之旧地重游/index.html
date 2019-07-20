@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="题目链接 做的时候觉得如果要查看两个数的乘积是不是平方数，就必须把每个数字与另外的每一个数字比较，也就是有O（N^2）的复杂度。谁知道一看题解，竟然用到了数学的知识。">
-<meta name="keywords" content="唯一分解定理">
+  <meta name="description" content="刚刚A了紫书上的一道BFS题，就正好把其精华应用到了这道题上。">
+<meta name="keywords" content="BFS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="square numbers">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/08/square numbers/index.html">
+<meta property="og:title" content="sdnuoj-1220 之旧地重游">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/07/20/sdnuoj-1220-之旧地重游/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="题目链接 做的时候觉得如果要查看两个数的乘积是不是平方数，就必须把每个数字与另外的每一个数字比较，也就是有O（N^2）的复杂度。谁知道一看题解，竟然用到了数学的知识。">
+<meta property="og:description" content="刚刚A了紫书上的一道BFS题，就正好把其精华应用到了这道题上。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-20T15:25:22.753Z">
+<meta property="og:updated_time" content="2019-07-20T02:50:36.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="square numbers">
-<meta name="twitter:description" content="题目链接 做的时候觉得如果要查看两个数的乘积是不是平方数，就必须把每个数字与另外的每一个数字比较，也就是有O（N^2）的复杂度。谁知道一看题解，竟然用到了数学的知识。">
+<meta name="twitter:title" content="sdnuoj-1220 之旧地重游">
+<meta name="twitter:description" content="刚刚A了紫书上的一道BFS题，就正好把其精华应用到了这道题上。">
 
 
 
@@ -116,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/08/square numbers/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/07/20/sdnuoj-1220-之旧地重游/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>square numbers | 云腾致雨</title>
+  <title>sdnuoj-1220 之旧地重游 | 云腾致雨</title>
   
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/08/square numbers/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/07/20/sdnuoj-1220-之旧地重游/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">square numbers
+          <h1 class="post-title" itemprop="name headline">sdnuoj-1220 之旧地重游
 
               
             
@@ -389,24 +389,12 @@
                 
               
 
-              <time title="创建时间：2019-05-08 22:12:41" itemprop="dateCreated datePublished" datetime="2019-05-08T22:12:41+08:00">2019-05-08</time>
+              <time title="创建时间：2019-07-20 10:40:44 / 修改时间：10:50:36" itemprop="dateCreated datePublished" datetime="2019-07-20T10:40:44+08:00">2019-07-20</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-20 23:25:22" itemprop="dateModified" datetime="2019-05-20T23:25:22+08:00">2019-05-20</time>
               
             
           </span>
@@ -465,9 +453,12 @@
       
 
       
-        <p><a href="https://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Index/problemdetail/pid/3258.html" target="_blank" rel="noopener">题目链接</a></p>
-<p>做的时候觉得如果要查看两个数的乘积是不是平方数，就必须把每个数字与另外的每一个数字比较，也就是有O（N^2）的复杂度。谁知道一看题解，竟然用到了数学的知识。<a id="more"></a>每一个平方数都可以表示成为多个素数的偶次幂的乘积。这个其实是应用了唯一分解定理。唯一分解定理是说：<strong>任何大于1的自然数都可以唯一的用若干个素数的乘积表示出来</strong>。那么一个平方数自然就可以表示成为若干个素数的偶次幂的乘积了。然后我们就可以运用这个做题了。把每个数字化简到最简的数字，然后就可以得到答案了。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">1001000</span>];</span><br><span class="line"><span class="keyword">int</span> prime[<span class="number">1001000</span>];</span><br><span class="line"><span class="keyword">int</span> flag[<span class="number">1001000</span>];</span><br><span class="line"><span class="keyword">int</span> tot;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prim</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    tot = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">1000001</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!vis[i])</span><br><span class="line">        &#123;</span><br><span class="line">            prime[++tot] = i * i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + i; j &lt;= <span class="number">1000001</span>; j += i)</span><br><span class="line">            &#123;</span><br><span class="line">                vis[j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    prim();</span><br><span class="line">    <span class="keyword">int</span> t, n, num;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(flag,<span class="number">0</span>,<span class="keyword">sizeof</span>(flag));</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; num;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= tot &amp;&amp; prime[j] &lt;= num; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span>(num % prime[j] == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    num /= prime[j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            flag[num]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">1000010</span>; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            ans += flag[j] * (flag[j] - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>刚刚A了紫书上的一道BFS题，就正好把其精华应用到了这道题上。</p>
+<a id="more"></a>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>现在想想其实这个输出路径的无非是多了一条输出路径而已，我们知道每个点的前驱都是可以在遍历中确定的，我开了一个三维数组，前两维记录坐标，第三维记录的是从哪个方向到达该点（和紫书的那道题一样）。这样我只需要在BFS中加上记录路径的一句话就行了。最后在输出路径的时候，只需要输出第三维的方向就行了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> x,y,dir;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dir1[] = &#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;   <span class="comment">//向东，向西，向南 向北</span></span><br><span class="line"><span class="keyword">int</span> dir2[] = &#123;<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="built_in">string</span> ss = <span class="string">"DLRU"</span>, s[<span class="number">55</span>];</span><br><span class="line">node p[<span class="number">55</span>][<span class="number">55</span>][<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">55</span>][<span class="number">55</span>],n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(node u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;node&gt;V;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        V.push_back(u);</span><br><span class="line">        <span class="keyword">if</span>(u.x == <span class="number">0</span> &amp;&amp; u.y == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        u = p[u.x][u.y][u.dir];</span><br><span class="line">    &#125;</span><br><span class="line">    reverse(V.begin(), V.end());</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; V.size() - <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; V.size(); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ss[V[i].dir];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;node&gt;Q;</span><br><span class="line">    Q.push(&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;);</span><br><span class="line">    vis[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        node u = Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        <span class="keyword">if</span>(u.x == n - <span class="number">1</span> &amp;&amp; u.y == m - <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            print(u);</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            node v;</span><br><span class="line">            v.dir = i;</span><br><span class="line">            v.x = u.x + dir1[i];</span><br><span class="line">            v.y = u.y + dir2[i];</span><br><span class="line">            <span class="keyword">if</span>(v.x &lt; <span class="number">0</span> || v.x &gt;= n || v.y &lt; <span class="number">0</span> || v.y &gt;= m || vis[v.x][v.y] || s[v.x][v.y] == <span class="string">'1'</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            p[v.x][v.y][i] = u;        <span class="comment">//记录路径 这一句话就够了</span></span><br><span class="line">            vis[v.x][v.y] = <span class="number">1</span>;</span><br><span class="line">            Q.push(v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(vis, <span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">        &#125;</span><br><span class="line">        bfs();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后附上2019蓝桥杯B组迷宫题数据（30行50列），和这题一样，输出路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">01010101001011001001010110010110100100001000101010 00001000100000101010010000100000001001100110100101 01111011010010001000001101001011100011000000010000 01000000001010100011010000101000001010101011001011 00011111000000101000010010100010100000101100000000 11001000110101000010101100011010011010101011110111 00011011010101001001001010000001000101001110000000 10100000101000100110101010111110011000010000111010 00111000001010100001100010000001000101001100001001 11000110100001110010001001010101010101010001101000 00010000100100000101001010101110100010101010000101 11100100101001001000010000010101010100100100010100 00000010000000101011001111010001100000101010100011 10101010011100001000011000010110011110110100001000 10101010100001101010100101000010100000111011101001 10000000101100010000101100101101001011100000000100 10101001000000010100100001000100000100011110101001 00101001010101101001010100011010101101110000110101 11001010000100001100000010100101000001000111000010 00001000110000110101101000000100101001001000011101 10100101000101000000001110110010110101101010100001 00101000010000110101010000100010001001000100010101 10100001000110010001000010101001010101011111010010 00000100101000000110010100101001000001000000000010 11010000001001110111001001000011101001011011101000 00000110100010001000100000001000011101000000110011 10101000101000100010001111100010101001010000001000 10000010100101001010110000000100101010001011101000 00111100001000010000000110111000000001000000001011 10000001100111010111010001000110111010101101111000</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -506,7 +497,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/唯一分解定理/" rel="tag"># 唯一分解定理</a>
+            <a href="/tags/BFS/" rel="tag"># BFS</a>
           
         </div>
       
@@ -519,8 +510,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/08/每日一思/" rel="next" title="每日一思">
-                <i class="fa fa-chevron-left"></i> 每日一思
+              <a href="/2019/07/20/UVA-816-BFS之从学会到放弃/" rel="next" title="UVA-816 BFS之从学会到放弃">
+                <i class="fa fa-chevron-left"></i> UVA-816 BFS之从学会到放弃
               </a>
             
           </div>
@@ -528,10 +519,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/09/How-many-9s/" rel="prev" title="How many 9s">
-                How many 9s <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -786,6 +782,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -970,7 +983,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/05/08/square numbers/'
+    refer: '2019/07/20/sdnuoj-1220-之旧地重游/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
