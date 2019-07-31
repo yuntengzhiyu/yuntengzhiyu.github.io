@@ -97,18 +97,17 @@
 
 
 
-  <meta name="description" content="用邻接表存，为了方便依旧是输入的v代表该点是第几个点。然后输出的是从该点进行DFS的遍历的点的顺序。">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="比赛的时候想到用线段树存取每个区间前50大的数字，但是根本不知道怎么存，后来才知道用主席树，不用存，直接遍历50次查找前50大的就行！！ 白学了主席树了。。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构之图的遍历DFS 邻接表存图">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/05/06/数据结构之图的遍历DFS-邻接表存图/index.html">
+<meta property="og:title" content="Keen On Everything But Triangle 主席树 + 斐波那契">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/2019/07/31/Keen-On-Everything-But-Triangle-主席树-斐波那契/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="用邻接表存，为了方便依旧是输入的v代表该点是第几个点。然后输出的是从该点进行DFS的遍历的点的顺序。">
+<meta property="og:description" content="比赛的时候想到用线段树存取每个区间前50大的数字，但是根本不知道怎么存，后来才知道用主席树，不用存，直接遍历50次查找前50大的就行！！ 白学了主席树了。。。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-20T15:08:52.121Z">
+<meta property="og:updated_time" content="2019-07-31T10:35:04.737Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构之图的遍历DFS 邻接表存图">
-<meta name="twitter:description" content="用邻接表存，为了方便依旧是输入的v代表该点是第几个点。然后输出的是从该点进行DFS的遍历的点的顺序。">
+<meta name="twitter:title" content="Keen On Everything But Triangle 主席树 + 斐波那契">
+<meta name="twitter:description" content="比赛的时候想到用线段树存取每个区间前50大的数字，但是根本不知道怎么存，后来才知道用主席树，不用存，直接遍历50次查找前50大的就行！！ 白学了主席树了。。。">
 
 
 
@@ -116,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/05/06/数据结构之图的遍历DFS-邻接表存图/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/2019/07/31/Keen-On-Everything-But-Triangle-主席树-斐波那契/">
 
 
 
@@ -126,7 +125,7 @@
   };
 </script>
 
-  <title>数据结构之图的遍历DFS 邻接表存图 | 云腾致雨</title>
+  <title>Keen On Everything But Triangle 主席树 + 斐波那契 | 云腾致雨</title>
   
 
 
@@ -346,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/05/06/数据结构之图的遍历DFS-邻接表存图/">
+    <link itemprop="mainEntityOfPage" href="https://yuntengzhiyu.github.io/2019/07/31/Keen-On-Everything-But-Triangle-主席树-斐波那契/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云腾致雨">
@@ -363,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构之图的遍历DFS 邻接表存图
+          <h1 class="post-title" itemprop="name headline">Keen On Everything But Triangle 主席树 + 斐波那契
 
               
             
@@ -389,46 +388,16 @@
                 
               
 
-              <time title="创建时间：2019-05-06 12:10:30" itemprop="dateCreated datePublished" datetime="2019-05-06T12:10:30+08:00">2019-05-06</time>
+              <time title="创建时间：2019-07-31 17:28:46 / 修改时间：18:35:04" itemprop="dateCreated datePublished" datetime="2019-07-31T17:28:46+08:00">2019-07-31</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-20 23:08:52" itemprop="dateModified" datetime="2019-05-20T23:08:52+08:00">2019-05-20</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -465,9 +434,12 @@
       
 
       
-        <p>用邻接表存，为了方便依旧是输入的v代表该点是第几个点。然后输出的是从该点进行DFS的遍历的点的顺序。</p>
+        <p>比赛的时候想到用线段树存取每个区间前50大的数字，但是根本不知道怎么存，后来才知道用主席树，不用存，直接遍历50次查找前50大的就行！！ 白学了主席树了。。。</p>
 <a id="more"></a>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Arcnode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> vertex,data;                <span class="comment">//这条边的终点 以及权值</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Arcnode</span> *<span class="title">nextArc</span>;</span>              <span class="comment">//与这条边同起点的下一条边</span></span><br><span class="line">&#125;Arcnode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">vernode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;                   <span class="comment">//顶点数据</span></span><br><span class="line">     Arcnode *nextArc;            <span class="comment">// 以该点为起点的边</span></span><br><span class="line">&#125;vernode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    vernode vertex[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">int</span> vernum,arcnum;</span><br><span class="line">&#125;Graph;</span><br><span class="line"><span class="keyword">int</span> vis[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">locate</span><span class="params">(Graph G, <span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= G.vernum; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(G.vertex[i].data == x)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">create</span><span class="params">(Graph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,w;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; G.vernum &gt;&gt; G.arcnum;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= G.vernum ; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; G.vertex[i].data;</span><br><span class="line">        G.vertex[i].nextArc = <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= G.arcnum; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; w;</span><br><span class="line">        <span class="keyword">int</span> A = locate(G,a);</span><br><span class="line">        <span class="keyword">int</span> B = locate(G,b);</span><br><span class="line">        Arcnode *p,*p1;</span><br><span class="line">        p = <span class="keyword">new</span> Arcnode;             <span class="comment">//！！！这一步总是忘记</span></span><br><span class="line">        p -&gt; vertex = B;</span><br><span class="line">        p -&gt; nextArc = G.vertex[A].nextArc;</span><br><span class="line">        p -&gt; data = w;</span><br><span class="line">        G.vertex[A].nextArc = p;</span><br><span class="line">        p = <span class="keyword">new</span> Arcnode;</span><br><span class="line">        p -&gt; vertex = A;</span><br><span class="line">        p -&gt; nextArc = G.vertex[B].nextArc;</span><br><span class="line">        p -&gt; data = w;</span><br><span class="line">        G.vertex[B].nextArc = p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph G,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vis[v] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; v &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    Arcnode *p;</span><br><span class="line">    p = G.vertex[v].nextArc;</span><br><span class="line">    <span class="keyword">while</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> index = p -&gt; vertex;</span><br><span class="line">        <span class="keyword">if</span>(!vis[index])</span><br><span class="line">        &#123;</span><br><span class="line">            vis[index] = <span class="number">1</span>;</span><br><span class="line">            dfs(G,index);</span><br><span class="line">        &#125;</span><br><span class="line">        p = p -&gt; nextArc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    Graph G;</span><br><span class="line">    create(G);</span><br><span class="line">    <span class="keyword">int</span> v;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; v;</span><br><span class="line">    dfs(G,v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://vjudge.net/contest/315593#status//C/0/" target="_blank" rel="noopener">题目链接</a></p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>求能组成三角形的最大的周长</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>主席树模板可以求静态区间第K大数字，由斐波那契数列知道，在数据范围之内，不会存在大于50长度的序列还不能选出三角形（实际40几就不行了）。那么我们在输入完毕L，R后，遍历50次可以选出L，R这段区间前50大的数字，那么再看看能不能组成就行了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;set&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 1000005;</span><br><span class="line">const int maxn = 2500005;</span><br><span class="line">int rt[N &lt;&lt; 4], ls[N &lt;&lt; 4], rs[N &lt;&lt; 4],a[N], b[N],sum[N &lt;&lt; 4];</span><br><span class="line"></span><br><span class="line">int tot;</span><br><span class="line">void build(int &amp;o, int l, int r)</span><br><span class="line">&#123;</span><br><span class="line">    o = ++tot;</span><br><span class="line">    sum[o] = 0;</span><br><span class="line">    if(l == r)</span><br><span class="line">        return;</span><br><span class="line">    int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">    build(ls[o], l, mid);</span><br><span class="line">    build(rs[o], mid + 1, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void update(int &amp;o, int l, int r, int last, int k)</span><br><span class="line">&#123;</span><br><span class="line">    o = ++tot;</span><br><span class="line">    ls[o] = ls[last];</span><br><span class="line">    rs[o] = rs[last];</span><br><span class="line">    sum[o] = sum[last] + 1;</span><br><span class="line">    if(l == r)</span><br><span class="line">        return;</span><br><span class="line">    int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">    if(k &lt;= mid)</span><br><span class="line">        update(ls[o], l, mid, ls[last], k);</span><br><span class="line">    else</span><br><span class="line">        update(rs[o], mid + 1, r, rs[last], k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int query(int ss, int tt, int l, int r, int k)</span><br><span class="line">&#123;</span><br><span class="line">    if(l == r)</span><br><span class="line">        return l;</span><br><span class="line">    int cnt = sum[ls[tt]] - sum[ls[ss]];</span><br><span class="line">    int mid = (l + r) &gt;&gt; 1;</span><br><span class="line">    if(k &lt;= cnt)</span><br><span class="line">        return query(ls[ss],ls[tt],l, mid, k);</span><br><span class="line">    else</span><br><span class="line">        return query(rs[ss],rs[tt],mid + 1, r, k - cnt);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int t,n,Q,ll,rr,k;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    while(scanf(&quot;%d %d&quot;,&amp;n,&amp;Q) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        tot = 0;</span><br><span class="line">        for(int i = 1; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        memcpy(b,a,sizeof(a));</span><br><span class="line">        sort(b + 1, b + n + 1);</span><br><span class="line">        int sz = unique(b + 1, b + n + 1) - (b + 1);</span><br><span class="line">        build(rt[0],1,sz);</span><br><span class="line">        for(int i = 1; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i] = lower_bound(b + 1, b + sz + 1, a[i]) - b;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i = 1; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            update(rt[i],1,sz,rt[i - 1], a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        while(Q--)</span><br><span class="line">        &#123;</span><br><span class="line">            scanf(&quot;%d %d&quot;,&amp;ll,&amp;rr);</span><br><span class="line">            long long num = -1, q[55];</span><br><span class="line">            for(int i = 1; i &lt;= min(50, rr - ll + 1); ++i)</span><br><span class="line">            &#123;</span><br><span class="line">                q[i] = b[query(rt[ll - 1], rt[rr], 1,sz, rr - ll + 2 - i)];</span><br><span class="line">                if(q[i] + q[i - 1] &gt; q[i - 2] &amp;&amp; i &gt;= 3)</span><br><span class="line">                &#123;</span><br><span class="line">                    num = q[i - 1] + q[i - 2] + q[i];</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            printf(&quot;%lld\n&quot;,num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -504,12 +476,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
-          
-        </div>
-      
 
       
       
@@ -519,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/06/数据结构之图的遍历DFS-邻接矩阵存图/" rel="next" title="数据结构之图的遍历DFS 邻接矩阵存图">
-                <i class="fa fa-chevron-left"></i> 数据结构之图的遍历DFS 邻接矩阵存图
+              <a href="/2019/07/31/hdu-3333-离散化-莫队/" rel="next" title="hdu 3333 离散化 + 莫队">
+                <i class="fa fa-chevron-left"></i> hdu 3333 离散化 + 莫队
               </a>
             
           </div>
@@ -528,10 +494,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/06/数据结构之图的遍历BFS-邻接表-链栈/" rel="prev" title="数据结构之图的遍历BFS 邻接表+链栈">
-                数据结构之图的遍历BFS 邻接表+链栈 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -800,6 +771,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -984,7 +972,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/05/06/数据结构之图的遍历DFS-邻接表存图/'
+    refer: '2019/07/31/Keen-On-Everything-But-Triangle-主席树-斐波那契/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
