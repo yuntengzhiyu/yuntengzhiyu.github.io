@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[UVA - 11082 Dinic 上下界最大流]]></title>
+    <url>%2F2019%2F09%2F03%2FUVA-11082-Dinic-%E4%B8%8A%E4%B8%8B%E7%95%8C%E6%9C%80%E5%A4%A7%E6%B5%81%2F</url>
+    <content type="text"><![CDATA[这也能用最大流？？ 好吧，其实我是知道它能用最大流的，否则我也不会千里迢迢来A它了，这是省赛选拔赛第一场的一道题目，比赛的时候没有人A，但是我觉得这个题目很不错，所以赛后就记住这是最大流类型的了，5个月之后，我终于把它A了。 题目链接 题意告诉你一个矩阵前i行的]]></content>
+      <categories>
+        <category>ACM题解</category>
+      </categories>
+      <tags>
+        <tag>Dinic 最大流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[UVA - 11082 Dinic 上下界最大流]]></title>
+    <url>%2F2019%2F09%2F03%2FUVA-11082-Dinic-%E6%9C%80%E5%A4%A7%E6%B5%81%2F</url>
+    <content type="text"><![CDATA[这也能用最大流？？ 好吧，其实我是知道它能用最大流的，否则我也不会千里迢迢来A它了，这是省赛选拔赛第一场的一道题目，比赛的时候没有人A，但是我觉得这个题目很不错，所以赛后就记住这是最大流类型的了，5个月之后，我终于把它A了。 题目链接 题意告诉你一个矩阵前i行的和，前i列的和，实际上就是告诉你每一行的和， 每列的和，然后让你构造这个矩阵。 思路利用最大流来求，但是注意这个下界是1，因此需要先减1，最后再把对应答案加上1. 我们把每一行的和A[i]看成一个点，源点到这些点的权值为A[i]-m, 把每一列的和B[i]看成一个点，这些点到汇点的权值为B[i]-n， 行点到列点的权值为19，这样形成的图求最大流，最后我们输出反边对应的权值+1就是答案，因为反边记录了流体的情况。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;stdio.h&gt;#include &lt;queue&gt;#include &lt;cstring&gt;using namespace std;typedef long long ll;const int inf = 0x3f3f3f3f;int G[101][101];int n, m, deep[501];int A[50], B[50];int bfs(int s, int t)&#123; queue&lt;int&gt;Q; Q.push(s); memset(deep, 0, sizeof(deep)); deep[s] = 1; while(!Q.empty()) &#123; int u = Q.front(); Q.pop(); for(int i = 0; i &lt;= n + m + 1; ++i) &#123; if(G[u][i] == 0) continue; int w = G[u][i]; if(w &gt; 0 &amp;&amp; deep[i] == 0)&#123; deep[i] = deep[u] + 1; Q.push(i); &#125; &#125; &#125; if(deep[t] == 0) return 0; return 1;&#125;int dfs(int s, int dis)&#123; if(s == n + m + 1) return dis; for(int i = 0; i &lt;= n + m + 1; ++i)&#123; if(G[s][i] == 0) continue; int w = G[s][i]; if(w &gt; 0 &amp;&amp; deep[i] == deep[s] + 1)&#123; int d = dfs(i, min(w, dis)); if(d &gt; 0)&#123; G[s][i] -= d; G[i][s] += d; return d; &#125; &#125; &#125; return 0;&#125;int main()&#123; int T, caser = 1; cin &gt;&gt; T; while(T--) &#123; cin &gt;&gt; n &gt;&gt; m; memset(G, 0, sizeof(G)); int sum = 0; for(int i = 1; i &lt;= n; ++i) &#123; scanf("%d",&amp;A[i]); A[i] -= sum; sum += A[i]; G[0][i] = A[i] - m; &#125; sum = 0; for(int i = 1; i &lt;= m; ++i) &#123; scanf("%d",&amp;B[i]); B[i] -= sum; sum += B[i]; G[i + n][n + m + 1] = B[i] - n; &#125; for(int i = 1; i &lt;= n; ++i) &#123; for(int j = 1; j &lt;= m; ++j) &#123; G[i][j + n] = 19; &#125; &#125; sum = 0; while(bfs(0, n + m + 1)) &#123; while(int d = dfs(0, inf)) &#123; sum += d; &#125; &#125; cout &lt;&lt; "Matrix " &lt;&lt; caser++ &lt;&lt; '\n'; for(int i = 1; i &lt;= n; ++i) &#123; for(int j = 1; j &lt;= m; ++j) &#123; printf("%d%c",G[j + n][i] + 1 , j == m?'\n':' '); &#125; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>ACM题解</category>
+      </categories>
+      <tags>
+        <tag>Dinic 最大流</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2018南京区域赛I 最大流 Dinic]]></title>
     <url>%2F2019%2F09%2F03%2F2018%E5%8D%97%E4%BA%AC%E5%8C%BA%E5%9F%9F%E8%B5%9BI-%E6%9C%80%E5%A4%A7%E6%B5%81-Dinic%2F</url>
     <content type="text"><![CDATA[奇思妙想最大流 题目链接 题意 给你N个士兵的信息，给出每个士兵可以杀的一些人的编号，但是士兵只能挑选一个敌人并杀死他，现在有K个药水，1瓶药水只能作用在一个士兵的身上，每个士兵服用一瓶药水就可以多杀一个人，每个敌人只能被一个士兵杀死，现在问你所有士兵最多可以杀死多少人。 思路建最大流的图， 源点连到每个士兵上，权值为1，代表每个士兵一开始就可以杀一人，源点到另外特殊的一点权值为K，然后这个特殊点连到每个士兵身上，每个权值为1，代表这K个药水可以分给士兵，并且每人最多1个。每个士兵连到对应的敌人上，代表他可以杀死某个敌人，敌人最终连到汇点，代表每个士兵只能被杀死一次。然后最大流就是答案了。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;stdio.h&gt;#include &lt;queue&gt;#include &lt;cstring&gt;using namespace std;typedef long long ll;int G[1005][1005];int n, m,k;const int inf = 0x3f3f3f3f;int deep[1005];int bfs(int s, int t)&#123; queue&lt;int&gt;Q; Q.push(s); memset(deep, 0, sizeof(deep)); deep[s] = 1; while(!Q.empty()) &#123; int u = Q.front(); Q.pop(); for(int i = 0; i &lt;= n + m + 2; i++) &#123; if(G[u][i] == 0) continue; int w = G[u][i]; if(deep[i] == 0 &amp;&amp; w &gt; 0) &#123; deep[i] = deep[u] + 1; Q.push(i); &#125; &#125; &#125; if(deep[t] == 0) return 0; return 1;&#125;int dfs(int s, int dis)&#123; if(s == n + m + 2) return dis; for(int i = 0; i &lt;= n + m + 2; i++) &#123; if(G[s][i] == 0) continue; int w = G[s][i]; if(w &gt; 0 &amp;&amp; deep[i] == deep[s] + 1) &#123; int d = dfs(i, min(dis, w)); if(d &gt; 0)&#123; G[s][i] -= d; G[i][s] += d; return d; &#125; &#125; &#125; return 0;&#125;int main()&#123; int num, num1; cin &gt;&gt; n &gt;&gt; m &gt;&gt; k; memset(G, 0, sizeof(G)); for(int i = 1; i &lt;= n; ++i) &#123; cin &gt;&gt; num; G[0][i] = 1; G[n + m + 1][i] = 1; for(int j = 1; j &lt;= num; ++j) &#123; scanf(&quot;%d&quot;,&amp;num1); G[i][num1 + n] = 1; G[num1 + n][n + m + 2] = 1; &#125; &#125; G[0][n + m + 1] = k; int sum = 0; while(bfs(0, n + m + 2)) &#123; while(int d = dfs(0, inf)) sum += d; &#125; cout &lt;&lt; sum &lt;&lt; &apos;\n&apos;;&#125;]]></content>
@@ -608,8 +630,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>bfs</tag>
         <tag>线段树</tag>
+        <tag>bfs</tag>
         <tag>二分</tag>
         <tag>stl</tag>
       </tags>
