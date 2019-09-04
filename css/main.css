@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff47;
+  background: #17ff33;
 }
 .feed-link,
 .chat {
@@ -2869,7 +2869,6 @@ ul.breadcrumb li+li:last-child {
 }
 body {
   background: url("/images/a.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
