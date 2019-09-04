@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e9ff00;
+  background: #2ab9ff;
 }
 .feed-link,
 .chat {
@@ -2874,6 +2874,7 @@ body {
   background-position: 50% 50%;
 }
 .main-inner {
+  background: #fff;
   opacity: 0.8;
 }
 .header-inner {
