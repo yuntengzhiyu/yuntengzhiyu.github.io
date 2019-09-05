@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python定向爬取中国大学排名]]></title>
+    <url>%2F2019%2F09%2F05%2FPython%E5%AE%9A%E5%90%91%E7%88%AC%E5%8F%96%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[爬取中国大学排名官网的信息 1.利用requests.get()函数定向爬取网页，然后返回text，即html文件 2.利用BeautifulSoup(html, ‘html.parser’)对html进行解析 3.对tbody的后辈节点tr进行查找，并且要保证查找到的是标签类型的后备节点。并将tr标签中的td标签进行查找，并将信息添加到ulist列表中 4.对ulist列表进行格式化输出 1234567891011121314151617181920212223242526272829303132333435363738import requestsfrom bs4 import BeautifulSoupimport bs4def gettext(url): try: r = requests.get(url) r.raise_for_status() r.encoding = r.apparent_encoding return r.text except: return &quot;&quot;def addulist(html, ulist): soup = BeautifulSoup(html, &apos;html.parser&apos;) for tr in soup.find(&apos;tbody&apos;).children: if isinstance(tr,bs4.element.Tag): tds = tr(&apos;td&apos;) ulist.append([tds[0].string, tds[1].string, tds[2].string])def printlist(ulist, num): print(&quot;&#123;:^10&#125;\t&#123;:^6&#125;\t&#123;:^10&#125;&quot;.format(&quot;排名&quot;, &quot;大学&quot;, &quot;分数&quot;)) for i in range(num): u = ulist[i] print(&quot;&#123;:^10&#125;\t&#123;:^6&#125;\t&#123;:^10&#125;&quot;.format(u[0], u[1], u[2]))def main(): ulist = [] url = &apos;http://www.zuihaodaxue.cn/zuihaodaxuepaiming2016.html&apos; html = gettext(url) addulist(html, ulist) printlist(ulist, 20)if __name__ == &quot;__main__&quot;: main()]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ZOJ 4124 Median Floyd传递闭包]]></title>
     <url>%2F2019%2F09%2F04%2FZOJ-4124-Median-Floyd%E4%BC%A0%E9%80%92%E9%97%AD%E5%8C%85%2F</url>
     <content type="text"><![CDATA[位运算的Floyd 题目链接 题意给你M个关系，A,B代表第A个数严格大于第B个数，现在这样形成的关系是否有可能存在中位数，可能的话就输出1. 思路我们需要知道的是由于关系的复杂性很可能存在多个可能的中位数。我们想一下如果这个数字不是中位数的话，那么小于或者大于它的数字一定多余等于n/2个，那么我们应该怎么判断两个数字之间的关系呢，利用Floyd我们就可以求出他们每两点之间的关系。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;stdio.h&gt;#include &lt;queue&gt;#include &lt;cstring&gt;#include &lt;bitset&gt;using namespace std;int M[101][101];int main()&#123; int T,n,m,a,b; cin &gt;&gt; T; while(T--)&#123; cin &gt;&gt; n &gt;&gt; m; memset(M, 0 , sizeof(M)); int flag = 0; for(int i = 1; i &lt;= m; ++i) &#123; scanf("%d %d",&amp;a,&amp;b); M[a][b] = 1; &#125; for(int k = 1; k &lt;= n; ++k) &#123; for(int i = 1; i &lt;= n; ++i) &#123; for(int j = 1; j &lt;= n; ++j) &#123; M[i][j] |= M[i][k] &amp; M[k][j]; &#125; &#125; &#125; for(int i = 1; i &lt;= n; ++i) &#123; for(int j = 1; j &lt;= n; ++j) &#123; if(M[i][j] == 1 &amp;&amp; M[j][i] == 1) flag = 1; &#125; &#125; int ans[105]; for(int i = 1; i &lt;= n; ++i) &#123; int in = 0, out = 0; for(int j = 1; j &lt;= n; ++j) &#123; if(M[i][j] == 1) out++; if(M[j][i] == 1) in++; &#125; if(in &gt; n/2 || out &gt; n/2) ans[i] = 0; else ans[i] = 1; &#125; if(flag == 1) &#123; for(int i = 1; i &lt;= n; ++i) cout &lt;&lt;0; cout &lt;&lt; '\n'; &#125; else&#123; for(int i = 1; i &lt;= n; ++i) &#123; cout &lt;&lt; ans[i] ; &#125; cout &lt;&lt; '\n'; &#125; &#125;&#125;]]></content>
@@ -641,8 +652,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>bfs</tag>
         <tag>线段树</tag>
+        <tag>bfs</tag>
         <tag>二分</tag>
         <tag>stl</tag>
       </tags>
