@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛客竞赛34 能天使的愿望]]></title>
+    <url>%2F2019%2F11%2F24%2F%E7%89%9B%E5%AE%A2%E7%AB%9E%E8%B5%9B34-%E8%83%BD%E5%A4%A9%E4%BD%BF%E7%9A%84%E6%84%BF%E6%9C%9B%2F</url>
+    <content type="text"><![CDATA[不是，出大问题，看我上一篇文章，刚写的分组背包，然后比赛就不会了? 好吧，其实比赛一眼就看出是分组背包了， 就是细节上不太会处理. 题目链接 题意总共要买K个东西，告诉你了在每个商店买从1到M个商品的价格。但是每个商店只能有一种选择。问你买K个东西的最低价格。 思路很显然的分组背包了。但是需要求的是最小值，不是最大值，因此我们初始化的时候需要设成inf，而不是0。 同时我们需要知道转移方程dp[j] = min(dp[j], dp[j - k] + $a[i][k]$) 12345678910111213141516171819202122232425262728293031323334353637#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;string&gt;#include &lt;cstring&gt; using namespace std;typedef long long ll;const int inf =0x3f3f3f3f;ll a[806][805];ll v[1005];ll f[1005];int main()&#123; ll N, M, Y, K; cin &gt;&gt; N &gt;&gt; M &gt;&gt; K &gt;&gt; Y; for(int i = 1; i &lt;= N; ++i)&#123; scanf("%lld",&amp;v[i]); &#125; for(int i = 1; i &lt;= N; ++i)&#123; for(int j = 1; j &lt;= M; ++j)&#123; scanf("%lld",&amp;a[i][j]); if(j &lt; Y)&#123; a[i][j] += v[i] * j; &#125; &#125; &#125; memset(f, inf, sizeof(f)); f[0] = 0; for(int i = 1; i &lt;= N; ++i)&#123; for(int j = K; j &gt;= 0; --j) &#123; for(int k = 1; k &lt;= M; ++k)&#123; f[j] = min(f[j], f[j - k] + a[i][k]); &#125; &#125; &#125; cout &lt;&lt; f[K] &lt;&lt; '\n';&#125;]]></content>
+      <categories>
+        <category>ACM题解</category>
+      </categories>
+      <tags>
+        <tag>分组背包</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HDU 4341 分组背包]]></title>
     <url>%2F2019%2F11%2F20%2FHDU-4341-%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85%2F</url>
     <content type="text"><![CDATA[分组背包，解决每一组物品只能选择一组的问题。题目链接## 题意黄金矿工游戏，应该都玩过把，给你每个矿石的坐标，以及获取他的所需的时间以及你可以得到的价值，问你可以在规定时间内可以获得的最大价值。有个问题是，如果这两个矿石位于同一条直线上，必须是先把较近的矿石获取完毕才能获取后面的矿石。## 思路我们可以把位于同一条直线上的矿石合并，让较远的矿石的时间所需再加上等于他前面的矿石的时间之和，价值也是如此。那么这样的话，我们可以把位于同一条直线上的矿石看成一个组，我们每次只能在每个组中选取一种情况。这样就转换成了分组背包。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;string&gt;#include &lt;cstring&gt;using namespace std;typedef long long ll;struct Point&#123; int x, y, t, v; double k;&#125;P[10005];bool cmp(Point a, Point b)&#123; if(a.k != b.k) return a.k &lt; b.k; else&#123; if(a.x != b.x) return a.y &lt; b.y; else return a.y &lt; b.y; &#125;&#125;int f[50005];int vis[50005];int main()&#123; int N, T ,caser = 1; while(cin &gt;&gt; N &gt;&gt; T)&#123; memset(vis, 0, sizeof(vis)); for(int i = 1; i &lt;= N; ++i)&#123; scanf("%d%d%d%d",&amp;P[i].x,&amp;P[i].y, &amp;P[i].t, &amp;P[i].v); P[i].k = (P[i].y * 1.0)/ P[i].x; &#125; vector&lt;int&gt;a[505], b[505]; sort(P + 1, P + N + 1,cmp); int tot = 0; memset(vis, 0, sizeof(vis)); for(int i = 1; i &lt;= N; ++i) &#123; int sum1 = 0, sum2 = 0; sum1 += P[i].t; sum2 += P[i].v; if(!vis[i])&#123; a[++tot].push_back(sum1); b[tot].push_back(sum2); vis[i] = 1; &#125; for(int j = i + 1; j &lt;= N; ++j)&#123; if(P[j].k != P[i].k)break; int t = P[j].t; int v = P[j].v; P[j].t += sum1; P[j].v += sum2; sum1 += t; sum2 += v; if(!vis[j])&#123; vis[j] = 1; a[tot].push_back(P[j].t); b[tot].push_back(P[j].v); &#125; &#125; &#125; memset(f, 0, sizeof(f)); for(int i = 1; i &lt;= tot; ++i)&#123; for(int j = T; j &gt;= 0; --j)&#123; for(int k = 0; k &lt; a[i].size(); ++k)&#123; if(j &gt;= a[i][k]) f[j] = max(f[j], f[j- a[i][k]] + b[i][k]); &#125; &#125; &#125; cout &lt;&lt; "Case " &lt;&lt; caser++ &lt;&lt; ": "; cout &lt;&lt; f[T] &lt;&lt; '\n'; &#125;&#125;]]></content>
@@ -752,8 +763,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>线段树</tag>
         <tag>bfs</tag>
+        <tag>线段树</tag>
         <tag>二分</tag>
         <tag>stl</tag>
       </tags>
