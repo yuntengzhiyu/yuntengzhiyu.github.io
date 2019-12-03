@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[POJ 1220 高精度进制转换]]></title>
+    <url>%2F2019%2F12%2F03%2FPOJ-1220-%E9%AB%98%E7%B2%BE%E5%BA%A6%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[2019ICPC银川题目。不太会用C++，保留一下JAVA模板 题目链接 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465import java.util.Scanner;//相当于输入输出头文件import java.util.*;import java.math.BigDecimal;import java.math.*;public class Main&#123; public static void main(String[] args) &#123; Scanner cin = new Scanner(System.in); BigInteger sum , a; sum = BigInteger.valueOf(0); BigInteger b, c; String s; b = cin.nextBigInteger(); c = cin.nextBigInteger(); s = cin.next(); int len = s.length(); BigInteger tmp = BigInteger.valueOf(1); for(int i = len - 1; i &gt;= 0; --i ) &#123; int k = 0; char cc = s.charAt(i); if(cc &gt;= 'A' &amp;&amp; cc &lt;= 'Z') &#123; k = cc - 'A' + 10; &#125; if(cc &gt;= '0' &amp;&amp; cc &lt;= '9') &#123; k = cc - '0'; &#125; if(cc &gt;= 'a' &amp;&amp; cc &lt;= 'z') &#123; k = cc - 'a' + 36; &#125; sum = sum.add(BigInteger.valueOf(k).multiply(tmp)); tmp = tmp.multiply(b); &#125; int cnt = 0; int ans[] = new int[10005]; while(sum.compareTo(BigInteger.valueOf(0))!=0) &#123; ans[++cnt] = sum.mod(c).intValue(); sum = sum.divide(c); &#125; if(cnt == 0) &#123; System.out.println('0'); &#125; else&#123; char answer[] = new char[10005]; int tot = 0; for(int i = cnt; i &gt;= 1; --i ) &#123; if(ans[i] &gt;= 0 &amp;&amp; ans[i] &lt;= 9) &#123; answer[++tot] = (char)(ans[i] + '0'); &#125; if(ans[i] &gt;= 10 &amp;&amp; ans[i] &lt;= 35) &#123; char p = (char)(ans[i] - 10 + 'A'); answer[++tot] = p; &#125; if(ans[i] &gt;= 36 &amp;&amp; ans[i] &lt;= 61) &#123; char p = (char)(ans[i] - 36 + 'a'); answer[++tot] = p; &#125; &#125; for(int i = 1; i &lt;= tot; ++i) &#123; System.out.print(answer[i]); &#125; &#125; &#125; &#125;]]></content>
+      <categories>
+        <category>ACM题解</category>
+      </categories>
+      <tags>
+        <tag>高精度进制转换</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[牛客竞赛34 能天使的愿望]]></title>
     <url>%2F2019%2F11%2F24%2F%E7%89%9B%E5%AE%A2%E7%AB%9E%E8%B5%9B34-%E8%83%BD%E5%A4%A9%E4%BD%BF%E7%9A%84%E6%84%BF%E6%9C%9B%2F</url>
     <content type="text"><![CDATA[不是，出大问题，看我上一篇文章，刚写的分组背包，然后比赛就不会了? 好吧，其实比赛一眼就看出是分组背包了， 就是细节上不太会处理. 题目链接 题意总共要买K个东西，告诉你了在每个商店买从1到M个商品的价格。但是每个商店只能有一种选择。问你买K个东西的最低价格。 思路很显然的分组背包了。但是需要求的是最小值，不是最大值，因此我们初始化的时候需要设成inf，而不是0。 同时我们需要知道转移方程dp[j] = min(dp[j], dp[j - k] + $a[i][k]$) 12345678910111213141516171819202122232425262728293031323334353637#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;string&gt;#include &lt;cstring&gt; using namespace std;typedef long long ll;const int inf =0x3f3f3f3f;ll a[806][805];ll v[1005];ll f[1005];int main()&#123; ll N, M, Y, K; cin &gt;&gt; N &gt;&gt; M &gt;&gt; K &gt;&gt; Y; for(int i = 1; i &lt;= N; ++i)&#123; scanf("%lld",&amp;v[i]); &#125; for(int i = 1; i &lt;= N; ++i)&#123; for(int j = 1; j &lt;= M; ++j)&#123; scanf("%lld",&amp;a[i][j]); if(j &lt; Y)&#123; a[i][j] += v[i] * j; &#125; &#125; &#125; memset(f, inf, sizeof(f)); f[0] = 0; for(int i = 1; i &lt;= N; ++i)&#123; for(int j = K; j &gt;= 0; --j) &#123; for(int k = 1; k &lt;= M; ++k)&#123; f[j] = min(f[j], f[j - k] + a[i][k]); &#125; &#125; &#125; cout &lt;&lt; f[K] &lt;&lt; '\n';&#125;]]></content>
@@ -763,8 +774,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>bfs</tag>
         <tag>线段树</tag>
+        <tag>bfs</tag>
         <tag>二分</tag>
         <tag>stl</tag>
       </tags>
