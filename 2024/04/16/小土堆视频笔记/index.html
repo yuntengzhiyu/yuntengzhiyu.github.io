@@ -97,18 +97,18 @@
 
 
 
-  <meta name="description" content="1234567891011过程记录1.cmd中nvidia-smi 可以查看最高支持的cuda版本2.创建与删除虚拟环境conda create -n myenv python=3.8conda remove -n myenv --all查看虚拟环境的路径conda info --envsconda env list3.在torch官网中，最好使用pip install ,不用conda inst">
+  <meta name="description" content="小土堆pytorch学习记录">
 <meta name="keywords" content="pytorch,cnn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小土堆视频笔记">
 <meta property="og:url" content="https://yuntengzhiyu.github.io/2024/04/16/小土堆视频笔记/index.html">
 <meta property="og:site_name" content="云腾致雨">
-<meta property="og:description" content="1234567891011过程记录1.cmd中nvidia-smi 可以查看最高支持的cuda版本2.创建与删除虚拟环境conda create -n myenv python=3.8conda remove -n myenv --all查看虚拟环境的路径conda info --envsconda env list3.在torch官网中，最好使用pip install ,不用conda inst">
+<meta property="og:description" content="小土堆pytorch学习记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2024-04-16T12:38:38.501Z">
+<meta property="og:updated_time" content="2024-04-16T13:55:58.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小土堆视频笔记">
-<meta name="twitter:description" content="1234567891011过程记录1.cmd中nvidia-smi 可以查看最高支持的cuda版本2.创建与删除虚拟环境conda create -n myenv python=3.8conda remove -n myenv --all查看虚拟环境的路径conda info --envsconda env list3.在torch官网中，最好使用pip install ,不用conda inst">
+<meta name="twitter:description" content="小土堆pytorch学习记录">
 
 
 
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2024-04-16 20:26:25 / 修改时间：20:38:38" itemprop="dateCreated datePublished" datetime="2024-04-16T20:26:25+08:00">2024-04-16</time>
+              <time title="创建时间：2024-04-16 20:26:25 / 修改时间：21:55:58" itemprop="dateCreated datePublished" datetime="2024-04-16T20:26:25+08:00">2024-04-16</time>
             
 
             
@@ -482,7 +482,9 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">过程记录</span><br><span class="line">1.cmd中nvidia-smi 可以查看最高支持的cuda版本</span><br><span class="line">2.创建与删除虚拟环境</span><br><span class="line">conda create -n myenv python=3.8</span><br><span class="line">conda remove -n myenv --all</span><br><span class="line">查看虚拟环境的路径</span><br><span class="line">conda info --envs</span><br><span class="line">conda env list</span><br><span class="line">3.在torch官网中，最好使用pip install ,不用conda install下载torch</span><br><span class="line">4.在虚拟环境中 需要使用conda install nb_conda 下载jupyter 相关依赖</span><br><span class="line">这样就可以在jupyter中使用虚拟环境(应该和ipython相关)</span><br></pre></td></tr></table></figure>
+        <p>小土堆pytorch学习记录</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">过程记录</span><br><span class="line">1.cmd中nvidia-smi 可以查看最高支持的cuda版本</span><br><span class="line">2.创建与删除虚拟环境</span><br><span class="line">conda create -n myenv python=3.8</span><br><span class="line">conda remove -n myenv --all</span><br><span class="line">查看虚拟环境的路径</span><br><span class="line">conda info --envs</span><br><span class="line">conda env list</span><br><span class="line">3.在torch官网中，最好使用pip install ,不用conda install下载torch</span><br><span class="line">4.在虚拟环境中 需要使用conda install nb_conda 下载jupyter 相关依赖</span><br><span class="line">这样就可以在jupyter中使用虚拟环境(应该和ipython相关)</span><br></pre></td></tr></table></figure>
 <h4 id="1-torchvision-datasets以及DataLoader的使用"><a href="#1-torchvision-datasets以及DataLoader的使用" class="headerlink" title="1. torchvision.datasets以及DataLoader的使用"></a>1. torchvision.datasets以及DataLoader的使用</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torchvision</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader</span><br><span class="line"><span class="keyword">from</span> torch.utils.tensorboard <span class="keyword">import</span> SummaryWriter</span><br><span class="line"></span><br><span class="line">test_data = torchvision.datasets.CIFAR10(root=<span class="string">'dataset1'</span>,train=<span class="literal">False</span>,transform=torchvision.transforms.ToTensor())</span><br><span class="line">data_loader = DataLoader(test_data,batch_size=<span class="number">64</span>,shuffle=<span class="literal">True</span>,num_workers=<span class="number">0</span>,drop_last=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">writer = SummaryWriter(<span class="string">"logs"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(<span class="number">2</span>):</span><br><span class="line">    step = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> data_loader:</span><br><span class="line">        img, label = data</span><br><span class="line">        writer.add_images(<span class="string">"dataloader &#123;&#125;"</span>.format(epoch), img, step)</span><br><span class="line">        step = step + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">writer.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#在terminal中输入tensorboard --logdir=logs</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-文件的创建以及写入"><a href="#2-文件的创建以及写入" class="headerlink" title="2. 文件的创建以及写入"></a>2. 文件的创建以及写入</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(os.path.join(root_path,out_path,<span class="string">"&#123;&#125;.txt"</span>.format(name)), <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">     f.write(content)</span><br></pre></td></tr></table></figure>
 <h4 id="3-PIL-Image的转换"><a href="#3-PIL-Image的转换" class="headerlink" title="3.PIL Image的转换"></a>3.PIL Image的转换</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils.tensorboard <span class="keyword">import</span> SummaryWriter</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>将Image转换为np.array, shape=H*W*C</span><br><span class="line">writer = SummaryWriter(<span class="string">"logs"</span>)</span><br><span class="line">root_path = <span class="string">"dataset/train/ants_image/0013035.jpg"</span></span><br><span class="line">image = Image.open(root_path)</span><br><span class="line">image.show()  <span class="comment">#查看图片</span></span><br><span class="line">image = np.array(image)</span><br><span class="line">writer.add_image(<span class="string">"test"</span>,image,<span class="number">1</span>,dataformats=<span class="string">'HWC'</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>将Image转换为tensor 不需要转换通道，tensor格式就是c*h*w</span><br><span class="line">trans = transforms.ToTensor()</span><br><span class="line">image = trans(image)</span><br><span class="line">writer.add_image(<span class="string">"test"</span>,image,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>先resize然后转换为tensor</span><br><span class="line">tran_resize2 = transforms.Resize(<span class="number">512</span>)</span><br><span class="line">tran_tensor = transforms.ToTensor()</span><br><span class="line">tran_compose = transforms.Compose([tran_resize2,tran_tensor])</span><br><span class="line">img_compose = tran_compose(image)</span><br></pre></td></tr></table></figure>
@@ -626,7 +628,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">106</span>
+                    <span class="site-state-item-count">107</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -796,7 +798,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">58</span>
+                    <span class="site-state-item-count">59</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
