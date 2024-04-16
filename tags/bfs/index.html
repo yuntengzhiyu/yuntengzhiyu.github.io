@@ -100,7 +100,7 @@
   <meta name="description" content="不畏艰险，乘风破浪">
 <meta property="og:type" content="website">
 <meta property="og:title" content="云腾致雨">
-<meta property="og:url" content="https://yuntengzhiyu.github.io/tags/bfs/index.html">
+<meta property="og:url" content="https://yuntengzhiyu.github.io/tags/BFS/index.html">
 <meta property="og:site_name" content="云腾致雨">
 <meta property="og:description" content="不畏艰险，乘风破浪">
 <meta property="og:locale" content="zh-CN">
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="https://yuntengzhiyu.github.io/tags/bfs/">
+  <link rel="canonical" href="https://yuntengzhiyu.github.io/tags/BFS/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>标签: bfs | 云腾致雨</title>
+  <title>标签: BFS | 云腾致雨</title>
   
 
 
@@ -386,7 +386,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>bfs<small>标签</small>
+        <h1>BFS<small>标签</small>
         </h1>
       </div>
 
@@ -398,17 +398,17 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/05/09/省赛前的刷题训练（一）/" itemprop="url">
+          <a class="post-title-link" href="/2019/07/20/sdnuoj-1220-之旧地重游/" itemprop="url">
             
-              <span itemprop="name">省赛前的刷题训练(一)</span>
+              <span itemprop="name">sdnuoj-1220 之旧地重游</span>
             
           </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-09T20:26:50+08:00" content="2019-05-09">
-          05-09
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-20T10:40:44+08:00" content="2019-07-20">
+          07-20
         </time>
       </div>
 
@@ -424,43 +424,17 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/04/29/HDU-变形课/" itemprop="url">
+          <a class="post-title-link" href="/2019/07/20/UVA-816-BFS之从学会到放弃/" itemprop="url">
             
-              <span itemprop="name">变形课</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-29T21:29:26+08:00" content="2019-04-29">
-          04-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/29/A-strange-lift/" itemprop="url">
-            
-              <span itemprop="name">HDU - 1548 A strange lift</span>
+              <span itemprop="name">UVA-816 BFS之从学会到放弃</span>
             
           </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-29T16:57:31+08:00" content="2019-04-29">
-          04-29
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-20T09:20:47+08:00" content="2019-07-20">
+          07-20
         </time>
       </div>
 
@@ -519,7 +493,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">103</span>
+                    <span class="site-state-item-count">106</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -552,7 +526,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -679,7 +655,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">55</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">57</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1320,6 +1300,35 @@
       ta.style.position = 'absolute';
       ta.style.opacity = '0';
       ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
+eadOnly = true;
       ta.value = code;
       document.body.appendChild(ta);
       ta.select();
