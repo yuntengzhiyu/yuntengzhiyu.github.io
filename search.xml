@@ -321,8 +321,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>二分</tag>
         <tag>主席树</tag>
+        <tag>二分</tag>
       </tags>
   </entry>
   <entry>
@@ -448,8 +448,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>二分</tag>
         <tag>主席树</tag>
+        <tag>二分</tag>
       </tags>
   </entry>
   <entry>
@@ -471,8 +471,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>完全背包</tag>
         <tag>二分</tag>
+        <tag>完全背包</tag>
       </tags>
   </entry>
   <entry>
@@ -829,8 +829,8 @@
         <category>ACM题解</category>
       </categories>
       <tags>
-        <tag>线段树</tag>
         <tag>bfs</tag>
+        <tag>线段树</tag>
         <tag>二分</tag>
         <tag>stl</tag>
       </tags>
