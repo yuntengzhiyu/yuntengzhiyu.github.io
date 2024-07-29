@@ -2731,4 +2731,18 @@
         <tag>双向BFS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>jupyterlab及其插件安装</title>
+    <url>/2024/07/30/jupyterlab%E5%8F%8A%E5%85%B6%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>启用jupyterlab以及插件jupyter-lsp的自动补全功能</p>
+<span id="more"></span>
+
+<p>使用虚拟环境演示</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n <span class="built_in">test</span></span><br><span class="line">conda activate <span class="built_in">test</span></span><br><span class="line">conda install python=3.8 nb_conda</span><br><span class="line">conda install jupyterlab</span><br><span class="line">jupter lab --version</span><br><span class="line"></span><br><span class="line"><span class="comment">#相关插件和服务器</span></span><br><span class="line">pip install jupyterlab-lsp</span><br><span class="line">pip install <span class="string">&#x27;python-lsp-server[all]&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置jupyterlab的实时补全</span></span><br><span class="line">settings -&gt; settings editor -&gt; code completion -&gt; continuous hinting 以及 另一个completion文件里的autocompletion功能</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习记录</category>
+      </categories>
+  </entry>
 </search>
