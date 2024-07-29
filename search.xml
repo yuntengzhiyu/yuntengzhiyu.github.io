@@ -1243,8 +1243,7 @@
   <entry>
     <title>hexo从win迁移到mac</title>
     <url>/2024/07/27/hexo%E4%BB%8Ewin%E8%BF%81%E7%A7%BB%E5%88%B0mac/</url>
-    <content><![CDATA[<p>你好</p>
-<span id="more"></span>
+    <content><![CDATA[<span id="more"></span>
 
 <h4 id="1-在mac上安装git和node"><a href="#1-在mac上安装git和node" class="headerlink" title="1. 在mac上安装git和node"></a>1. 在mac上安装git和node</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">如果之前下载了xcode的命令行工具 git就已经下载好了</span><br><span class="line">命令行工具的地址 /library/developer/commandlinetools</span><br><span class="line">可以通过which git查看git命令的全局地址</span><br><span class="line">下载完毕 通过git -v查看版本, git config --global --list查看全局配置</span><br><span class="line">设置个人信息(要与github信息对应)</span><br><span class="line">git config --global user.name &quot;yuntengzhiyu&quot;</span><br><span class="line">git config --global user.email &quot;shenmafuyun213@163.com&quot;</span><br><span class="line"></span><br><span class="line">可以通过homebrew下载node</span><br><span class="line">brew install node</span><br><span class="line">which node 查看地址在/opt/homebrew/bin下</span><br><span class="line">下载完node 最好配置一下node镜像源 一般是淘宝源</span><br><span class="line">查看node配置 npm config list</span><br></pre></td></tr></table></figure>
 
