@@ -1357,7 +1357,7 @@
 </li>
 <li><p>对于pip, conda, npm等等这些下载包的命令， 最好首先配置一下镜像源，前两个配置清华源，npm淘宝源，下载非常快。</p>
 </li>
-<li><p>最近用的比较频繁的命令 创建文件目录mkdir, 创建文件touch, 创建或编辑文件vim, 删除文件rm -rf(慎用), 打开文件open filename,  history查看终端命令历史, git config –globale –list查看git全局配置信息， conda config –show, pip config list这些都可以查看配置源的信息</p>
+<li><p>最近用的比较频繁的命令 创建文件目录mkdir, 创建文件touch, 创建或编辑文件vim, 删除文件rm -rf(慎用), 打开文件open filename,  history查看终端命令历史, git config –globale –list查看git全局配置信息， conda config –show, pip config list这些都可以查看配置源的信息, conda config –get channels 可以查看配置源</p>
 </li>
 <li><p>快捷键记录: vim中，不要在编辑模式下，删除某一行:dd，删除多行:数字+dd<br>终端快捷键，定位到命令的首个字符:control+A,定位到最后一个字符:control+E,删除当前命令:control+U</p>
 </li>
@@ -2746,6 +2746,23 @@
       </categories>
       <tags>
         <tag>比赛题解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>word和ppt学习记录</title>
+    <url>/2024/09/11/word%E5%92%8Cppt%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>word和ppt学习记录</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.word中多行公式如何对齐</span><br><span class="line">一行一行添加公式，=前面添加对齐符，下面的行退回到上一行，按shift+enter即可对齐。</span><br><span class="line">2.快捷键</span><br><span class="line">word公式编辑: alt + =</span><br><span class="line">ppt选中所有图形: ctrl+G</span><br><span class="line">3.技巧</span><br><span class="line">如何裁剪ppt然后直接导出pdf或者svg等等。</span><br><span class="line">1. ctrl+G选中所有图形，顶部形状一栏查看图形的宽和高，顶部设计一栏，自定义幻灯片大小，输入宽高，最大化幻灯片即可。</span><br><span class="line">2.将图片导入word发现被文字覆盖，顶部清楚格式（橡皮格式）</span><br><span class="line">3.转置 \top</span><br><span class="line">\in 属于</span><br><span class="line">\doubleR 空心R</span><br><span class="line">上横线 \overline(x) s</span><br><span class="line">\phi \Phi \varphi</span><br><span class="line">\zeta</span><br><span class="line">加粗： ctl+b</span><br><span class="line">省略号 \ldots \cdots</span><br><span class="line">长双箭头 \Longrightarrow</span><br><span class="line">微分算子 \nabla</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习记录</category>
+      </categories>
+      <tags>
+        <tag>word</tag>
+        <tag>ppt</tag>
       </tags>
   </entry>
 </search>
